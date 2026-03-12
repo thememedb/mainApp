@@ -1,0 +1,41 @@
+{
+	"editor.cursorBlinking": "phase",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.cursorSurroundingLines": 3,
+	"editor.cursorWidth": 5,
+	"editor.fontLigatures": true,
+	"editor.fontFamily": "JetBrains Mono",
+	"editor.fontSize": 20,
+	"editor.fontWeight": "700",
+	"editor.lineHeight": 1.35,
+	"editor.minimap.enabled": false,
+	"editor.accessibilitySupport": "off",
+	"editor.guides.bracketPairs": true,
+	"editor.indentSize": "tabSize",
+
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"files.autoSave": "afterDelay",
+
+	"git.autofetch": true,
+	// "git.openRepositoryInParentFolders": "never",
+	// "git.confirmSync": false,
+	// "git.ignoreMissingGitWarning": true,
+	// "git.enableSmartCommit": true,
+
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.cursorWidth": 4,
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.fontWeight": "bold",
+	"terminal.integrated.smoothScrolling": true,
+
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.iconTheme": "material-icon-theme",
+
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
+}
