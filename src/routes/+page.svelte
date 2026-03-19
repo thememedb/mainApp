@@ -64,7 +64,7 @@
 
 	<main class="content">
 		<h1 class="logo">memedb</h1>
-		<div class="tagline">The legend is born</div>
+		<div class="tagline">the legend is born</div>
 		<div class="coming-soon">stay tuned</div>
 		<div class="launch-date">Spring 2026</div>
 	</main>
@@ -172,16 +172,16 @@
 		color: transparent;
 		filter: drop-shadow(0 0 8rem rgba(0, 212, 255, 0.5))
 			drop-shadow(0 0 4rem rgba(255, 51, 187, 0.4));
-		animation: breathe 16s ease-in-out infinite;
+		animation: breathe 10s ease-in-out infinite;
 	}
 
 	@keyframes breathe {
 		0%,
 		100% {
-			filter: drop-shadow(0 0 3rem rgba(14, 165, 233, 0.35));
+			filter: blur(0.5px) drop-shadow(0 0 3rem rgba(14, 165, 233, 0.5));
 		}
 		50% {
-			filter: drop-shadow(0 0 5rem rgba(236, 72, 153, 0.4));
+			filter: blur(0px) drop-shadow(0 0 5rem rgba(236, 72, 153, 0.4));
 		}
 	}
 
@@ -199,10 +199,11 @@
 	.tagline {
 		font-size: clamp(1.2rem, 3.8vw, 1.55rem);
 		font-weight: 500;
-		color: gray;
+		color: rgb(76, 76, 76);
 		max-width: 38ch;
 		line-height: 1.48;
 		opacity: 0.92;
+		filter: blur(0.5px);
 	}
 
 	.launch-date {
@@ -211,7 +212,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		font-size: 1.25rem;
-		color: gray;
+		color: rgb(76, 76, 76);
 		letter-spacing: 0.05em;
 		margin-top: 0;
 		z-index: 2;
