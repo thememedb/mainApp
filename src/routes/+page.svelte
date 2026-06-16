@@ -71,7 +71,7 @@
 </div>
 
 <style>
-	:global(:root) {
+	:root {
 		--bg: #000000;
 		--text: #f8f9ff;
 		--gradient: linear-gradient(
@@ -85,8 +85,8 @@
 		);
 	}
 
-	:global(html),
-	:global(body) {
+	html,
+	body {
 		margin: 0;
 		padding: 0;
 		width: 100%;
