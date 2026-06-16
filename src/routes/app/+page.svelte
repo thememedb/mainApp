@@ -5,7 +5,11 @@
 
 <main>
 	{#each items as item}
-		<div class="square" style="background-image: url({'https://thumb.pr0gramm.com/' + item.thumb}); background-size: cover; background-position: center;">
+		<div
+			class="square"
+			style="background-image: url({'https://thumb.pr0gramm.com/' +
+				item.thumb}); background-size: cover; background-position: center;"
+		>
 			<!-- <img src={'https://thumb.pr0gramm.com/' + item.thumb} alt={'thumb-' + item.id} loading="lazy" /> -->
 		</div>
 	{/each}
@@ -37,21 +41,21 @@
 		display: block;
 	}
 
-@media (width < 376px) {
-	main {
-		width: 100dvw;
-		/* height: 100dvh; */
+	@media (width < 376px) {
+		main {
+			width: 100dvw;
+			/* height: 100dvh; */
+		}
+		.square {
+			--size: calc((100dvw - 16px) / 3);
+			width: var(--size);
+			height: var(--size);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: scale-down;
+			display: block;
+		}
 	}
-	.square {
-		--size: calc((100dvw - 16px) / 3);
-		width: var(--size);
-		height: var(--size);
-	}
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: scale-down;
-		display: block;
-	}
-}
 </style>
