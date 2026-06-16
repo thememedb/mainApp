@@ -12,6 +12,11 @@
 	"editor.accessibilitySupport": "off",
 	"editor.guides.bracketPairs": true,
 	"editor.indentSize": "tabSize",
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	// "[svelte]": {
+	// 	"editor.defaultFormatter": "svelte.svelte-vscode"
+	// }
 
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
@@ -33,9 +38,5 @@
 	"workbench.colorTheme": "One Dark Pro",
 	"workbench.iconTheme": "material-icon-theme",
 
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"typescript.updateImportsOnFileMove.enabled": "always",
-
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"js/ts.updateImportsOnFileMove.enabled": "always"
 }
