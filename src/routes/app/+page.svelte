@@ -18,13 +18,13 @@
 	main {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 4px;
+		gap: 8px;
 		background-color: transparent;
 		width: 100%;
 	}
 	.square {
 		aspect-ratio: 1;
 		background-color: var(--gray40);
-		border-radius: 4px;
+		border-radius: 8px;
 	}
 </style>
