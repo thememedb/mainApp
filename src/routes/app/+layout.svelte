@@ -37,7 +37,7 @@
 		top: 0;
 		width: 100%;
 		height: calc(var(--px64) * 100cqw);
-		background-color: rgba(0, 0, 0, 0.85);
+		background-color: rgba(0, 0, 0, 1);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -53,6 +53,15 @@
 			#ffff00 70%,
 			#ff7700 85%,
 			#ff33bb 100%
+		);
+		--gradient: linear-gradient(
+			-150deg,
+			color(display-p3 1 0 1) 0%,
+			color(display-p3 0 0.8 1) 40%,
+			color(display-p3 0 1 0.6) 50%,
+			color(display-p3 1 1 0) 70%,
+			color(display-p3 1 0.5 0) 85%,
+			color(display-p3 1 0.2 0.7) 100%
 		);
 		margin: 0;
 		font-size: calc(var(--px36) * 100cqw);
@@ -76,6 +85,11 @@
 		height: calc(var(--px24) * 100cqw);
 	}
 	main {
+		container-type: inline-size;
+		width: 100%;
+		margin: 0 auto;
+		min-width: 240px;
+		max-width: 644px;
 		background-color: black;
 	}
 	a {

@@ -8,6 +8,7 @@ html {
 	--violet: #9733c2;
 
 	--black: #000000;
+	--gray01: #030303;
 	--gray05: #0d0d0d;
 	--gray10: #1a1a1a;
 	--gray15: #262626;
@@ -60,8 +61,7 @@ html.dark {
 	}
 }
 body {
-	min-width: 240px;
-	background: var(--bg-1);
+	background: var(--gray01);
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 700;
