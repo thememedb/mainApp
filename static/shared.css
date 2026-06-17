@@ -60,6 +60,7 @@ html.dark {
 	}
 }
 body {
+	min-width: 240px;
 	background: var(--bg-1);
 	font-style: normal;
 	font-variant: normal;
