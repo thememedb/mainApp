@@ -42,6 +42,9 @@
 		background: linear-gradient(
 			to bottom,
 			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0.96) 30%,
+			rgba(0, 0, 0, 0.9) 80%,
+			rgba(0, 0, 0, 0.85) 90%,
 			rgba(0, 0, 0, 0.8) 98%,
 			rgba(0, 0, 0, 0) 100%
 		);
@@ -73,7 +76,7 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
-		filter:blur(0.25px);
+		filter:blur(0.1px);
 	}
 	.nav {
 		display: flex;
@@ -83,7 +86,7 @@
 	.nav img {
 		width: calc(var(--px24) * 100cqw);
 		height: calc(var(--px24) * 100cqw);
-		filter:blur(0.25px);
+		filter:blur(0.1px);
 	}
 	main {
 		container-type: inline-size;
