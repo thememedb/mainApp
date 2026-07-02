@@ -82,7 +82,6 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
-		filter: blur(0.01px);
 	}
 	.nav {
 		display: flex;
@@ -92,7 +91,6 @@
 	.nav img {
 		width: calc(var(--px24) * 100cqw);
 		height: calc(var(--px24) * 100cqw);
-		filter: blur(0.01px);
 	}
 	main {
 		container-type: inline-size;
