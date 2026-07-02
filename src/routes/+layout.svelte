@@ -48,6 +48,12 @@
 			rgba(0, 0, 0, 0.8) 98%,
 			rgba(0, 0, 0, 0) 100%
 		);
+		backdrop-filter: blur(1px);
+		/* mask-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0) 100%
+		); */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -76,7 +82,7 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
-		filter:blur(0.1px);
+		filter: blur(0.01px);
 	}
 	.nav {
 		display: flex;
@@ -86,7 +92,7 @@
 	.nav img {
 		width: calc(var(--px24) * 100cqw);
 		height: calc(var(--px24) * 100cqw);
-		filter:blur(0.1px);
+		filter: blur(0.01px);
 	}
 	main {
 		container-type: inline-size;
