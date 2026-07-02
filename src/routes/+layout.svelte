@@ -22,7 +22,9 @@
 			</a>
 		</div>
 	</header>
-	{@render children()}
+	<div class="children">
+		{@render children()} //main content will be rendered here
+	</div>
 </main>
 
 <style>
@@ -37,12 +39,13 @@
 		top: 0;
 		width: 100%;
 		height: calc(var(--px64) * 100cqw);
-		background-color: rgba(0, 0, 0, 1);
+		background-color: rgba(0, 0, 0, 0.81);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: calc(var(--px16) * 100cqw);
 		padding: calc(var(--px16) * 100cqw);
+		z-index: 1000;
 	}
 	.logo {
 		--gradient: linear-gradient(
@@ -53,15 +56,6 @@
 			#ffff00 70%,
 			#ff7700 85%,
 			#ff33bb 100%
-		);
-		--gradient: linear-gradient(
-			-150deg,
-			color(display-p3 1 0 1) 0%,
-			color(display-p3 0 0.8 1) 40%,
-			color(display-p3 0 1 0.6) 50%,
-			color(display-p3 1 1 0) 70%,
-			color(display-p3 1 0.5 0) 85%,
-			color(display-p3 1 0.2 0.7) 100%
 		);
 		margin: 0;
 		font-size: calc(var(--px36) * 100cqw);
@@ -91,6 +85,10 @@
 		min-width: 240px;
 		max-width: 644px;
 		background-color: black;
+		min-height: 100dvh;
+	}
+	.children {
+		z-index: 0;
 	}
 	a {
 		text-decoration: none;

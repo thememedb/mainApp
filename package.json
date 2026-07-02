@@ -4,8 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"start": "vite dev --open",
-		"app": "vite dev --open /app",
+		"go": "vite dev --open",
 		"build": "vite build",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare --port 4173",
 		"prepare": "svelte-kit sync || echo ''",
