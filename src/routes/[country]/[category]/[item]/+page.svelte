@@ -4,19 +4,16 @@
 </script>
 
 <div class="media container">
-	<img
-		class="full"
-		src={'https://img.pr0gramm.com/' + data.thumb}
-		alt="full meme"
-	/>
+	<img class="image" src={'https://img.pr0gramm.com/' + data.thumb} alt="full meme" />
 	<!-- svelte-ignore a11y_media_has_caption -->
 	<video
 		id="video"
 		class="full"
 		// src={'https://vid.pr0gramm.com/' + data.video}
 		src={'https://vid-warm.pr0gramm.com/2025/10/03/438d4bc4728c65bc.mp4'}
+		playsinline
+		preload="auto"
 		autoplay
-		muted
 		loop
 		controls
 	></video>
