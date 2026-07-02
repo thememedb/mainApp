@@ -39,7 +39,12 @@
 		top: 0;
 		width: 100%;
 		height: calc(var(--px64) * 100cqw);
-		background-color: rgba(0, 0, 0, 0.81);
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0.85) 98.5%,
+			rgba(0, 0, 0, 0) 100%
+		);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

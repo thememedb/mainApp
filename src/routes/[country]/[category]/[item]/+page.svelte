@@ -6,7 +6,7 @@
 <div class="media container">
 	<img class="image" src={'https://img.pr0gramm.com/' + data.thumb} alt="full meme" />
 	<!-- svelte-ignore a11y_media_has_caption -->
-	<video
+	<!-- <video
 		id="video"
 		class="full"
 		// src={'https://vid.pr0gramm.com/' + data.video}
@@ -16,7 +16,7 @@
 		autoplay
 		loop
 		controls
-	></video>
+	></video> -->
 </div>
 <div class="stats container">
 	<div class="user">user</div>
