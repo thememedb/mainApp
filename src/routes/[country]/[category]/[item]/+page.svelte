@@ -8,17 +8,17 @@
 		class="full"
 		src={'https://img.pr0gramm.com/' + data.thumb}
 		alt="full meme"
-		onload={() => (status = true)}
 	/>
+	<!-- svelte-ignore a11y_media_has_caption -->
 	<video
+		id="video"
 		class="full"
 		// src={'https://vid.pr0gramm.com/' + data.video}
 		src={'https://vid-warm.pr0gramm.com/2025/10/03/438d4bc4728c65bc.mp4'}
 		autoplay
-		// muted
+		muted
 		loop
 		controls
-		onloadeddata={() => (status = true)}
 	></video>
 </div>
 <div class="stats container">
