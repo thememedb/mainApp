@@ -18,14 +18,53 @@
 		controls
 	></video> -->
 </div>
-<div class="stats container">
-	<div class="user">user</div>
-	<div class="reactions">reactions</div>
-	<div class="tags">tags</div>
+<div class="user">
+	<img src="/userAvatars/5.jpg" alt="user avatar" />
+	<div class="user-info">
+		<span class="username">arestedDevelopmentsu</span>
+		<div class="score-time">
+			<span class="score">+692 • </span>
+			<span class="time">12min ago</span>
+		</div>
+	</div>
 </div>
+<div class="reactions">reactions</div>
+<div class="tags">tags</div>
 <div class="comments container">comments</div>
 
 <style>
+	.user {
+		padding: calc(var(--px16) * 100cqw) calc(var(--px8) * 100cqw) calc(var(--px16) * 100cqw) 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: calc(var(--px8) * 100cqw);
+		font-size: calc(var(--px20) * 100cqw);
+		img {
+			width: calc(var(--px48) * 100cqw);
+			height: calc(var(--px48) * 100cqw);
+			border-radius: 100%;
+		}
+		.user-info {
+			display: flex;
+			flex-direction: column;
+			gap: calc(var(--px8) * 100cqw);
+			.username {
+				font-size: calc(var(--px20) * 100cqw);
+				font-weight: 500;
+			}
+			.score-time {
+				color: var(--gray80);
+				font-weight: 400;
+				.score {
+					font-size: calc(var(--px20) * 100cqw);
+				}
+				.time {
+					font-size: calc(var(--px18) * 100cqw);
+				}
+			}
+		}
+	}
 	img {
 		width: 100%;
 		height: auto;

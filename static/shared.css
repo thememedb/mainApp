@@ -1,5 +1,17 @@
 /* variables*/
 html {
+	--px4: calc(4/376);
+	--px8: calc(8/376);
+	--px16: calc(16/376);
+	--px18: calc(18/376);
+	--px20: calc(20/376);
+	--px24: calc(24/376);
+	--px36: calc(36/376);
+	--px42: calc(42/376);
+	--px48: calc(48/376);
+	--px52: calc(52/376);
+	--px56: calc(56/376);
+	--px64: calc(64/376);
 	--red: #e0251f;
 	--orange: #fc6605;
 	--yellow: #ffdc00;
@@ -61,13 +73,14 @@ html.dark {
 	}
 }
 body {
+	color: white;
 	background: var(--gray01);
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 700;
 	font-size: 1rem;
 	font-family: var(--font);
-	line-height: 1.5;
+	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
 img,
