@@ -67,6 +67,56 @@
 			alt="emoji3"
 			style="--i: 14;"
 		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 16;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 18;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 20;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 22;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 24;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 26;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 28;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 30;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 32;"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: 34;"
+		/>
 	</div>
 </div>
 <div class="tags container">tags</div>
