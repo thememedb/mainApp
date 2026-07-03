@@ -49,93 +49,93 @@
 	<div class="emojis">
 		<img src="/emojis/face-with-tears-of-joy_1f602.png" alt="emoji1" style="--i: 1;" />
 		<img src="/emojis/grinning-face-with-smiling-eyes_1f601.png" alt="emoji2" style="--i: 0.9;" />
-		<img src="/emojis/pile-of-poo_1f4a9.png" alt="emoji3" style="--i: {0.9**2};" />
-		<img src="/emojis/grinning-face_1f600.png" alt="emoji3" style="--i: {0.9**3};" />
-		<img src="/emojis/see-no-evil-monkey_1f648.png" alt="emoji3" style="--i: {0.9**4};" />
+		<img src="/emojis/pile-of-poo_1f4a9.png" alt="emoji3" style="--i: {0.9 ** 2};" />
+		<img src="/emojis/grinning-face_1f600.png" alt="emoji3" style="--i: {0.9 ** 3};" />
+		<img src="/emojis/see-no-evil-monkey_1f648.png" alt="emoji3" style="--i: {0.9 ** 4};" />
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-cold-sweat_1f605.png"
 			alt="emoji3"
-			style="--i: {0.9**5};"
+			style="--i: {0.9 ** 5};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-smiling-eyes_1f604.png"
 			alt="emoji3"
-			style="--i: {0.9**6};"
+			style="--i: {0.9 ** 6};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**7};"
+			style="--i: {0.9 ** 7};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**8};"
+			style="--i: {0.9 ** 8};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**9};"
+			style="--i: {0.9 ** 9};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**10};"
+			style="--i: {0.9 ** 10};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**11};"
+			style="--i: {0.9 ** 11};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**12};"
+			style="--i: {0.9 ** 12};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**13};"
+			style="--i: {0.9 ** 13};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**14};"
+			style="--i: {0.9 ** 14};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**15};"
+			style="--i: {0.9 ** 15};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**16};"
+			style="--i: {0.9 ** 16};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**17};"
+			style="--i: {0.9 ** 17};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**18};"
+			style="--i: {0.9 ** 18};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**19};"
+			style="--i: {0.9 ** 19};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**20};"
+			style="--i: {0.9 ** 20};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: {0.9**21};"
+			style="--i: {0.9 ** 21};"
 		/>
 	</div>
 </div>
@@ -203,8 +203,17 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			gap: calc(var(--px24) * 100cqw);
+			/* gap: calc(var(--px24) * 100cqw); */
 			.icons {
+				background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0) 0%,
+					rgba(0, 0, 0, 0.96) 30%,
+					rgba(0, 0, 0, 0.9) 80%,
+					rgba(0, 0, 0, 0.85) 90%,
+					rgba(0, 0, 0, 0.8) 97%,
+					rgba(0, 0, 0, 0) 100%
+				);
 				flex: 0 0 auto;
 				display: flex;
 				align-items: center;
@@ -216,12 +225,25 @@
 				}
 			}
 			.emojis {
+				padding-left: calc(var(--px24) * 100cqw);
+				mask-image: linear-gradient(
+					to right,
+					transparent,
+					rgba(0, 0, 0, 0.05) calc(var(--px4) * 100cqw),
+					rgba(0, 0, 0, 0.2)calc(var(--px8) * 100cqw),
+					rgba(0, 0, 0, 0.5) calc(var(--px12) * 100cqw),
+					rgba(0, 0, 0, 0.6) calc(var(--px16) * 100cqw),
+					rgba(0, 0, 0, 1) calc(var(--px24) * 100cqw),
+					rgba(0, 0, 0, 1) calc(100% - 100px),
+					transparent
+				);
 				flex: 1 1 auto;
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
 				gap: calc(var(--px8) * 100cqw);
-				overflow-x: auto;
+				overflow-x: scroll;
+				overflow-clip-margin: 24px;
 				scrollbar-width: none;
 				-ms-overflow-style: none;
 				-webkit-overflow-scrolling: touch;
