@@ -9,16 +9,16 @@
 		</a>
 		<div class="nav">
 			<a href="/uppload">
-				<img src="/icons/cloudArrowUp.svg" alt="Icon" width="24" height="24" />
+				<img src="/icons/cloudArrowUp.svg" alt="Icon" />
 			</a>
 			<a href="/donate">
-				<img src="/icons/handCoinsRegular.svg" alt="Icon" width="24" height="24" />
+				<img src="/icons/handCoinsRegular.svg" alt="Icon" />
 			</a>
 			<a href="/filter">
-				<img src="/icons/funnel.svg" alt="Filter" width="24" height="24" />
+				<img src="/icons/funnel.svg" alt="Filter" />
 			</a>
 			<a href="/menu">
-				<img src="/icons/menuBurger.svg" alt="IcoMenu" width="32" height="32" />
+				<img src="/icons/menuBurger.svg" alt="IcoMenu" />
 			</a>
 		</div>
 	</header>

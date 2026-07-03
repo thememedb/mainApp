@@ -21,7 +21,12 @@
 <div class="user">
 	<img src="/userAvatars/5.jpg" alt="user avatar" />
 	<div class="user-info">
-		<span class="username">arestedDevelopmentsu</span>
+		<div class="username">
+			<span>arestedDevelopmentsu</span><img
+				src="/icons/moneyFilled.svg"
+				alt="coins"
+			/>
+		</div>
 		<div class="score-time">
 			<span class="score">+692 • </span>
 			<span class="time">12min ago</span>
@@ -50,8 +55,16 @@
 			flex-direction: column;
 			gap: calc(var(--px8) * 100cqw);
 			.username {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: calc(var(--px4) * 100cqw);
 				font-size: calc(var(--px20) * 100cqw);
 				font-weight: 500;
+				img {
+					width: calc(var(--px20) * 100cqw);
+					height: calc(var(--px20) * 100cqw);
+				}
 			}
 			.score-time {
 				color: var(--gray80);
