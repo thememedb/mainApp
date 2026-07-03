@@ -47,75 +47,95 @@
 		<img src="/icons/smiley.svg" alt="share" />
 	</div>
 	<div class="emojis">
-		<img src="/emojis/face-with-tears-of-joy_1f602.png" alt="emoji1" style="--i: 0;" />
-		<img src="/emojis/grinning-face-with-smiling-eyes_1f601.png" alt="emoji2" style="--i: 2;" />
-		<img src="/emojis/pile-of-poo_1f4a9.png" alt="emoji3" style="--i: 4;" />
-		<img src="/emojis/grinning-face_1f600.png" alt="emoji3" style="--i: 6;" />
-		<img src="/emojis/see-no-evil-monkey_1f648.png" alt="emoji3" style="--i: 8;" />
+		<img src="/emojis/face-with-tears-of-joy_1f602.png" alt="emoji1" style="--i: 1;" />
+		<img src="/emojis/grinning-face-with-smiling-eyes_1f601.png" alt="emoji2" style="--i: 0.9;" />
+		<img src="/emojis/pile-of-poo_1f4a9.png" alt="emoji3" style="--i: {0.9**2};" />
+		<img src="/emojis/grinning-face_1f600.png" alt="emoji3" style="--i: {0.9**3};" />
+		<img src="/emojis/see-no-evil-monkey_1f648.png" alt="emoji3" style="--i: {0.9**4};" />
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-cold-sweat_1f605.png"
 			alt="emoji3"
-			style="--i: 10;"
+			style="--i: {0.9**5};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-smiling-eyes_1f604.png"
 			alt="emoji3"
-			style="--i: 12;"
+			style="--i: {0.9**6};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 14;"
+			style="--i: {0.9**7};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 16;"
+			style="--i: {0.9**8};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 18;"
+			style="--i: {0.9**9};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 20;"
+			style="--i: {0.9**10};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 22;"
+			style="--i: {0.9**11};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 24;"
+			style="--i: {0.9**12};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 26;"
+			style="--i: {0.9**13};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 28;"
+			style="--i: {0.9**14};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 30;"
+			style="--i: {0.9**15};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 32;"
+			style="--i: {0.9**16};"
 		/>
 		<img
 			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
 			alt="emoji3"
-			style="--i: 34;"
+			style="--i: {0.9**17};"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: {0.9**18};"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: {0.9**19};"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: {0.9**20};"
+		/>
+		<img
+			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
+			alt="emoji3"
+			style="--i: {0.9**21};"
 		/>
 	</div>
 </div>
@@ -204,12 +224,13 @@
 				overflow-x: auto;
 				scrollbar-width: none;
 				-ms-overflow-style: none;
+				-webkit-overflow-scrolling: touch;
 				&::-webkit-scrollbar {
 					display: none;
 				}
 				img {
-					width: calc(var(--px28) * 100cqw - var(--i) * 1px);
-					height: calc(var(--px28) * 100cqw - var(--i) * 1px);
+					width: calc(var(--px28) * 100cqw * var(--i));
+					height: calc(var(--px28) * 100cqw * var(--i));
 				}
 			}
 		}
