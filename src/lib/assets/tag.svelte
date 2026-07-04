@@ -1,13 +1,12 @@
 <script lang="ts">
-	import Plus from '$lib/assets/plus.svelte';
-	import Minus from '$lib/assets/icons/minus.svelte';
+	import Icon from '$lib/assets/icons/icon.svelte';
 	let { text } = $props();
 </script>
 
 <div class="tag">
-	<Plus class="icon" />
+	<Icon name="plus" class="icon" />
 	<span>{text}</span>
-	<Minus class="icon" />
+	<Icon name="minus" class="icon" />
 </div>
 
 <style>

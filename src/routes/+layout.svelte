@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '$lib/assets/icons/icon.svelte';
 	let { children } = $props();
 </script>
 
@@ -9,16 +10,16 @@
 		</a>
 		<div class="nav">
 			<a href="/uppload">
-				<img src="/icons/cloudArrowUp.svg" alt="Icon" />
+				<Icon name="cloudArrowUp" class="icon" />
 			</a>
 			<a href="/donate">
-				<img src="/icons/handCoinsRegular.svg" alt="Icon" />
+				<Icon name="handCoinsRegular" class="icon" />
 			</a>
 			<a href="/filter">
-				<img src="/icons/funnel.svg" alt="Filter" />
+				<Icon name="funnel" class="icon" />
 			</a>
 			<a href="/menu">
-				<img src="/icons/menuBurger.svg" alt="IcoMenu" />
+				<Icon name="menuBurger" class="icon" />
 			</a>
 		</div>
 	</header>
@@ -85,7 +86,8 @@
 				display: flex;
 				align-items: center;
 				gap: var(--px16);
-				img {
+				:global(.icon) {
+					color: var(--gray90);
 					width: var(--px24);
 					height: var(--px24);
 				}

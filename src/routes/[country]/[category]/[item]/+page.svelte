@@ -1,25 +1,12 @@
 <script lang="ts">
-	import PlusIcon from '$lib/assets/plus.svelte';
-	import MinusIcon from '$lib/assets/icons/minus.svelte';
 	import Tag from '$lib/assets/tag.svelte';
+	import MoneyFilled from '$lib/assets/icons/complex/moneyFilled.svelte';
+	import Icon from '$lib/assets/icons/icon.svelte';
 	let { data } = $props();
-	let status = false;
 </script>
 
 <div class="media container">
 	<img class="image" src={'https://img.pr0gramm.com/' + data.thumb} alt="full meme" />
-	<!-- svelte-ignore a11y_media_has_caption -->
-	<!-- <video
-		id="video"
-		class="full"
-		// src={'https://vid.pr0gramm.com/' + data.video}
-		src={'https://vid-warm.pr0gramm.com/2025/10/03/438d4bc4728c65bc.mp4'}
-		playsinline
-		preload="auto"
-		autoplay
-		loop
-		controls
-	></video> -->
 </div>
 <div class="user container">
 	<div class="user">
@@ -27,7 +14,7 @@
 		<div class="user-info">
 			<div class="username">
 				<span>arestedDevelopmentsu</span>
-				<img src="/icons/moneyFilled.svg" alt="coins" />
+				<MoneyFilled class="icon" />
 			</div>
 			<div class="score-time">
 				<span class="score">+692</span>
@@ -38,16 +25,16 @@
 	</div>
 	<div class="reply">
 		<a href="/reply">
-			<img src="/icons/reply.svg" alt="reply" />
+		<Icon name="reply" class="icon" />
 		</a>
 	</div>
 </div>
 <div class="reactions container">
 	<div class="icons">
-		<img src="/icons/plusCircle.svg" alt="like" />
-		<img src="/icons/minus.svg" alt="comment" />
-		<img src="/icons/heart.svg" alt="share" />
-		<img src="/icons/smiley.svg" alt="share" />
+		<Icon name="plus" class="icon" />
+		<Icon name="minus" class="icon" />
+		<Icon name="heart" class="icon" />
+		<Icon name="smiley" class="icon" />
 	</div>
 	<div class="emojis">
 		<img src="/emojis/face-with-tears-of-joy_1f602.png" alt="emoji1" style="--i: 1;" />
@@ -185,7 +172,7 @@
 						gap: var(--px4);
 						font-size: var(--px20);
 						font-weight: 500;
-						img {
+						:global(.icon) {
 							width: var(--px20);
 							height: var(--px20);
 						}
@@ -204,7 +191,8 @@
 			}
 			.reply {
 				padding: var(--px8);
-				img {
+				:global(.icon) {
+					color: var(--gray80);
 					width: var(--px32);
 					height: var(--px32);
 				}
@@ -229,7 +217,8 @@
 				align-items: center;
 				justify-content: flex-start;
 				gap: var(--px8);
-				img {
+				:global(.icon) {
+					color: var(--gray80);
 					width: var(--px32);
 					height: var(--px32);
 				}
