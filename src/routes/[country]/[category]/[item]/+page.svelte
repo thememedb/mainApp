@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PlusIcon from '$lib/assets/plus.svelte';
-	import MinusIcon from '$lib/assets/minus.svelte';
+	import MinusIcon from '$lib/assets/icons/minus.svelte';
 	import Tag from '$lib/assets/tag.svelte';
 	let { data } = $props();
 	let status = false;
@@ -143,13 +143,13 @@
 	</div>
 </div>
 <div class="tags container">
-	<Tag text="funny"/>
-	<Tag text="kvykt"/>
-	<Tag text="smiling"/>
-	<Tag text="happy"/>
-	<Tag text="lol"/>
-	<Tag text="katukas"/>
-	<Tag text="precious"/>
+	<Tag text="funny" />
+	<Tag text="kvykt" />
+	<Tag text="smiling" />
+	<Tag text="happy" />
+	<Tag text="lol" />
+	<Tag text="katukas" />
+	<Tag text="precious" />
 </div>
 <div class="comments container">comments</div>
 
@@ -252,11 +252,11 @@
 					rgba(0, 0, 0, 0.13) var(--px8),
 					rgba(0, 0, 0, 0.22) var(--px12),
 					rgba(0, 0, 0, 0.35) var(--px16),
-					rgba(0, 0, 0, 0.40) var(--px18),
+					rgba(0, 0, 0, 0.4) var(--px18),
 					rgba(0, 0, 0, 0.45) var(--px20),
 					rgba(0, 0, 0, 0.55) var(--px24),
-					rgba(0, 0, 0, 1.00) var(--px32),
-					rgba(0, 0, 0, 1.00) calc(100% - 60px),
+					rgba(0, 0, 0, 1) var(--px32),
+					rgba(0, 0, 0, 1) calc(100% - 60px),
 					transparent
 				);
 				&::-webkit-scrollbar {
@@ -273,16 +273,12 @@
 			scrollbar-width: none;
 			-ms-overflow-style: none;
 			-webkit-overflow-scrolling: touch;
-			&::-webkit-scrollbar {
-				display: none;
-			}
 			display: flex;
 			align-items: center;
 			gap: var(--px8);
 			padding: var(--px16) 0;
-			:global(.tag svg) {
-				width: var(--px24);
-				height: var(--px24);
+			&::-webkit-scrollbar {
+				display: none;
 			}
 		}
 	}
