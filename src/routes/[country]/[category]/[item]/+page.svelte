@@ -25,7 +25,7 @@
 	</div>
 	<div class="reply">
 		<a href="/reply">
-		<Icon name="reply" class="icon" />
+			<Icon name="reply" class="icon" />
 		</a>
 	</div>
 </div>
@@ -245,7 +245,7 @@
 					rgba(0, 0, 0, 0.45) var(--px20),
 					rgba(0, 0, 0, 0.55) var(--px24),
 					rgba(0, 0, 0, 1) var(--px32),
-					rgba(0, 0, 0, 1) calc(100% - 60px),
+					rgba(0, 0, 0, 1) calc(100% - var(--px64)),
 					transparent
 				);
 				&::-webkit-scrollbar {
