@@ -20,15 +20,15 @@
 
 <style>
 	.tag {
-		padding: calc(var(--px4) * 100cqw);
+		padding: var(--px4);
 		border-radius: 9999px;
 		display: flex;
-        flex-shrink: 0;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: flex-start;
-		gap: calc(var(--px4) * 100cqw);
+		gap: var(--px4);
 		background-color: var(--gray15);
-		font-size: calc(var(--px18) * 100cqw);
+		font-size: var(--px18);
 		font-weight: 450;
 		color: var(--gray60);
 	}

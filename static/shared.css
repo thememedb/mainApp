@@ -1,20 +1,22 @@
 /* variables*/
 html {
-	--px4: calc(4/376);
-	--px8: calc(8/376);
-	--px12: calc(12/376);
-	--px16: calc(16/376);
-	--px18: calc(18/376);
-	--px20: calc(20/376);
-	--px24: calc(24/376);
-	--px28: calc(28/376);
-	--px32: calc(32/376);
-	--px36: calc(36/376);
-	--px42: calc(42/376);
-	--px48: calc(48/376);
-	--px52: calc(52/376);
-	--px56: calc(56/376);
-	--px64: calc(64/376);
+	--px1: calc(100cqw / 376);
+	--px2: calc(2 * var(--px1));
+	--px4: calc(4 * var(--px1));
+	--px8: calc(8 * var(--px1));
+	--px12: calc(12 * var(--px1));
+	--px16: calc(16 * var(--px1));
+	--px18: calc(18 * var(--px1));
+	--px20: calc(20 * var(--px1));
+	--px24: calc(24 * var(--px1));
+	--px28: calc(28 * var(--px1));
+	--px32: calc(32 * var(--px1));
+	--px36: calc(36 * var(--px1));
+	--px42: calc(42 * var(--px1));
+	--px48: calc(48 * var(--px1));
+	--px52: calc(52 * var(--px1));
+	--px56: calc(56 * var(--px1));
+	--px64: calc(64 * var(--px1));
 	--red: #e0251f;
 	--orange: #fc6605;
 	--yellow: #ffdc00;

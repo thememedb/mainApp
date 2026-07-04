@@ -40,7 +40,7 @@
 			position: sticky;
 			top: 0;
 			width: 100%;
-			height: calc(var(--px64) * 100cqw);
+			height: var(--px64);
 			background: linear-gradient(
 				to bottom,
 				rgba(0, 0, 0, 1) 0%,
@@ -54,8 +54,8 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			gap: calc(var(--px16) * 100cqw);
-			padding: calc(var(--px16) * 100cqw);
+			gap: var(--px16);
+			padding: var(--px16);
 			z-index: 1000;
 			a {
 				text-decoration: none;
@@ -71,7 +71,7 @@
 					#ff33bb 100%
 				);
 				margin: 0;
-				font-size: calc(var(--px36) * 100cqw);
+				font-size: var(--px36);
 				font-weight: 700;
 				letter-spacing: -0.03em;
 				display: block;
@@ -84,10 +84,10 @@
 			.nav {
 				display: flex;
 				align-items: center;
-				gap: calc(var(--px16) * 100cqw);
+				gap: var(--px16);
 				img {
-					width: calc(var(--px24) * 100cqw);
-					height: calc(var(--px24) * 100cqw);
+					width: var(--px24);
+					height: var(--px24);
 				}
 			}
 		}
