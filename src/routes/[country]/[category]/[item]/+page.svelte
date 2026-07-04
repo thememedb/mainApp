@@ -1,4 +1,7 @@
 <script lang="ts">
+	import PlusIcon from '$lib/assets/plus.svelte';
+	import MinusIcon from '$lib/assets/minus.svelte';
+	import Tag from '$lib/assets/tag.svelte';
 	let { data } = $props();
 	let status = false;
 </script>
@@ -139,7 +142,15 @@
 		/>
 	</div>
 </div>
-<div class="tags container">tags</div>
+<div class="tags container">
+	<Tag text="funny"/>
+	<Tag text="kvykt"/>
+	<Tag text="smiling"/>
+	<Tag text="happy"/>
+	<Tag text="lol"/>
+	<Tag text="katukas"/>
+	<Tag text="precious"/>
+</div>
 <div class="comments container">comments</div>
 
 <style>
@@ -203,7 +214,6 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			/* gap: calc(var(--px24) * 100cqw); */
 			.icons {
 				background: linear-gradient(
 					to bottom,
@@ -226,27 +236,29 @@
 			}
 			.emojis {
 				padding-left: calc(var(--px24) * 100cqw);
-				mask-image: linear-gradient(
-					to right,
-					transparent,
-					rgba(0, 0, 0, 0.05) calc(var(--px4) * 100cqw),
-					rgba(0, 0, 0, 0.2)calc(var(--px8) * 100cqw),
-					rgba(0, 0, 0, 0.5) calc(var(--px12) * 100cqw),
-					rgba(0, 0, 0, 0.6) calc(var(--px16) * 100cqw),
-					rgba(0, 0, 0, 1) calc(var(--px24) * 100cqw),
-					rgba(0, 0, 0, 1) calc(100% - 100px),
-					transparent
-				);
 				flex: 1 1 auto;
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
 				gap: calc(var(--px8) * 100cqw);
 				overflow-x: scroll;
-				overflow-clip-margin: 24px;
 				scrollbar-width: none;
 				-ms-overflow-style: none;
 				-webkit-overflow-scrolling: touch;
+				mask-image: linear-gradient(
+					to right,
+					transparent,
+					rgba(0, 0, 0, 0.05) calc(var(--px4) * 100cqw),
+					rgba(0, 0, 0, 0.13) calc(var(--px8) * 100cqw),
+					rgba(0, 0, 0, 0.22) calc(var(--px12) * 100cqw),
+					rgba(0, 0, 0, 0.35) calc(var(--px16) * 100cqw),
+					rgba(0, 0, 0, 0.4) calc(var(--px18) * 100cqw),
+					rgba(0, 0, 0, 0.45) calc(var(--px20) * 100cqw),
+					rgba(0, 0, 0, 0.55) calc(var(--px24) * 100cqw),
+					rgba(0, 0, 0, 1) calc(var(--px32) * 100cqw),
+					rgba(0, 0, 0, 1) calc(100% - 60px),
+					transparent
+				);
 				&::-webkit-scrollbar {
 					display: none;
 				}
@@ -257,7 +269,21 @@
 			}
 		}
 		&.tags {
+			overflow-x: scroll;
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+			-webkit-overflow-scrolling: touch;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			display: flex;
+			align-items: center;
+			gap: calc(var(--px8) * 100cqw);
 			padding: calc(var(--px16) * 100cqw) 0;
+			:global(.tag svg) {
+				width: calc(var(--px24) * 100cqw);
+				height: calc(var(--px24) * 100cqw);
+			}
 		}
 	}
 
