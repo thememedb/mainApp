@@ -8,6 +8,7 @@
 <div class="media container">
 	<img class="image" src={'https://img.pr0gramm.com/' + data.thumb} alt="full meme" />
 </div>
+
 <div class="user container">
 	<div class="user">
 		<img src="/userAvatars/5.jpg" alt="user avatar" />
@@ -17,8 +18,7 @@
 				<MoneyFilled class="icon" />
 			</div>
 			<div class="score-time">
-				<span class="score">+692</span>
-				<span> • </span>
+				<span class="score">+692 • </span>
 				<span class="time">12min ago</span>
 			</div>
 		</div>
@@ -29,6 +29,7 @@
 		</a>
 	</div>
 </div>
+
 <div class="reactions container">
 	<div class="icons">
 		<Icon name="plus" class="icon" />
@@ -129,6 +130,7 @@
 		/>
 	</div>
 </div>
+
 <div class="tags container">
 	<Tag text="funny" />
 	<Tag text="kvykt" />
@@ -138,7 +140,94 @@
 	<Tag text="katukas" />
 	<Tag text="precious" />
 </div>
-<div class="comments container">comments</div>
+
+<div class="comments container">
+	<div class="comment">
+		<div class="user">
+			<img src="/userAvatars/4.jpg" alt="user avatar" />
+			<div class="user-info">
+				<div class="username">
+					<span>FermBoy</span>
+					<MoneyFilled class="icon" />
+				</div>
+				<div class="bottom">
+					<div class="score-time">
+						<span class="score">+17 • </span>
+						<span class="time">1min ago</span>
+					</div>
+					<div class="reactions">
+						<Icon name="threeDots" class="icon" />
+						<Icon name="plus" class="icon" />
+						<Icon name="minus" class="icon" />
+						<Icon name="reply" class="icon" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="commentText">
+			Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.
+		</div>
+	</div>
+	<div class="comment">
+		<div class="user">
+			<img src="/userAvatars/2.jpg" alt="user avatar" />
+			<div class="user-info">
+				<div class="username">
+					<span>YourMom</span>
+					<MoneyFilled class="icon" />
+				</div>
+				<div class="bottom">
+					<div class="score-time">
+						<span class="score">+17 • </span>
+						<span class="time">1min ago</span>
+					</div>
+					<div class="reactions">
+						<Icon name="threeDots" class="icon" />
+						<Icon name="plus" class="icon" />
+						<Icon name="minus" class="icon" />
+						<Icon name="reply" class="icon" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="commentText">
+			Darum wurden die ja versichert. Aus dem Link weiter oben in der Kette: "Mitte Januar 1913
+			versahen sie ihren acht Monate alten Sohn James mit Briefmarken im Wert von 15 Cent,
+			versicherten ihn für 50 Dollar und sendeten ihn zur Grossmutter." Das sind umgerechnet heute
+			1600€.
+		</div>
+	</div>
+	<div class="comment">
+		<div class="user">
+			<img src="/userAvatars/1.jpg" alt="user avatar" />
+			<div class="user-info">
+				<div class="username">
+					<span>Gigachad9000</span>
+					<MoneyFilled class="icon" />
+				</div>
+				<div class="bottom">
+					<div class="score-time">
+						<span class="score">+17 • </span>
+						<span class="time">1min ago</span>
+					</div>
+					<div class="reactions">
+						<Icon name="threeDots" class="icon" />
+						<Icon name="plus" class="icon" />
+						<Icon name="minus" class="icon" />
+						<Icon name="reply" class="icon" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="commentText">
+			"Als Paket" heisst hierbei es wurde eine Paketmarke auf ihre Jacke geklebt und ihr gesagt setz
+			dich ins Auto/Zug. Das war ein Schlupfloch das sich immer mal wieder Leute zur Nutze gemacht
+			haben, aber sie ist quasi als normaler Beifahrer für die Postleute mitgefahren. Ist wie als
+			würdest du zum Postboten sagen "Du fährst doch da lang, kannst du meine Tochter mitnehmen? Ich
+			bezahl auch das 'Paket' damit es offiziel ist."
+		</div>
+	</div>
+</div>
 
 <style>
 	.container {
@@ -268,6 +357,78 @@
 			padding: var(--px16) 0;
 			&::-webkit-scrollbar {
 				display: none;
+			}
+		}
+		&.comments {
+			padding: var(--px16) 0;
+			.comment {
+				padding: 0 0 var(--px16) 0;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+				gap: var(--px2);
+				.user {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					gap: var(--px8);
+					font-size: var(--px20);
+					img {
+						width: var(--px48);
+						height: var(--px48);
+						border-radius: 100%;
+					}
+					.user-info {
+						color: var(--gray90);
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: var(--px2);
+						.username {
+							display: flex;
+							align-items: center;
+							justify-content: flex-start;
+							gap: var(--px4);
+							font-size: var(--px20);
+							font-weight: 500;
+							:global(.icon) {
+								width: var(--px20);
+								height: var(--px20);
+							}
+						}
+						.bottom {
+							display: flex;
+							align-items: end;
+							justify-content: flex-start;
+							gap: var(--px8);
+							.score-time {
+								color: var(--gray80);
+								font-weight: 400;
+								line-height: 1.4;
+								font-size: var(--px14);
+							}
+							.reactions {
+								display: flex;
+								align-items: end;
+								justify-content: flex-start;
+								gap: var(--px8);
+								:global(.icon) {
+									color: var(--gray60);
+									width: var(--px24);
+									height: var(--px24);
+								}
+							}
+						}
+					}
+				}
+				.commentText {
+					font-size: var(--px18);
+					font-weight: 400;
+					color: var(--gray90);
+					line-height: 1.33333;
+				}
 			}
 		}
 	}

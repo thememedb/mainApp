@@ -42,12 +42,21 @@
 			top: 0;
 			width: 100%;
 			height: var(--px64);
+			/* background: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 0.98) 50%,
+				rgba(0, 0, 0, 0.9) 80%,
+				rgba(0, 0, 0, 0.85) 90%,
+				rgba(0, 0, 0, 0.8) 97%,
+				rgba(0, 0, 0, 0) 100%
+			); */
 			background: linear-gradient(
 				to bottom,
 				rgba(0, 0, 0, 1) 0%,
-				rgba(0, 0, 0, 0.96) 30%,
-				rgba(0, 0, 0, 0.9) 80%,
-				rgba(0, 0, 0, 0.85) 90%,
+				rgba(0, 0, 0, 0.995) 70%,
+				rgba(0, 0, 0, 0.95) 90%,
+				rgba(0, 0, 0, 0.9) 94%,
 				rgba(0, 0, 0, 0.8) 97%,
 				rgba(0, 0, 0, 0) 100%
 			);
