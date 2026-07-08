@@ -427,7 +427,7 @@
 			}
 		}
 		&.comments {
-			padding: var(--px16) var(--px8) 0 var(--leftpad);
+			padding: var(--px16) 0 0 var(--leftpad);
 		}
 		.threadContainer {
 			padding: 0 0 var(--px32) 0;
@@ -493,7 +493,7 @@
 					}
 				}
 				.commentText {
-					font-size: var(--px18);
+					font-size: calc(var(--px1) * 16);
 					font-weight: 400;
 					color: var(--gray80);
 					line-height: 1.33333;

@@ -54,6 +54,12 @@ html {
 	--font-mono:
 		ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	--border-radius: 8px;
+
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE/old Edge */
+}
+html::-webkit-scrollbar {
+	display: none; /* Chrome, Safari */
 }
 html.dark {
 	--bg-1: #2e2e2e;
@@ -92,6 +98,12 @@ body {
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
+
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+	display: none;
 }
 img,
 picture,
