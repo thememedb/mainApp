@@ -228,6 +228,34 @@
 					Rorem ipsum, dolor sit amet. Gaudeamus itur, nortradamus to chaltur.
 				</div>
 			</div>
+			<div class="reply">
+				<div class="comment">
+					<div class="user">
+						<img src="/userAvatars/4.jpg" alt="user avatar" />
+						<div class="user-info">
+							<div class="username">
+								<span>FermBoy</span>
+								<MoneyFilled class="icon" />
+							</div>
+							<div class="bottom">
+								<div class="score-time">
+									<span class="score">+17 • </span>
+									<span class="time">1min ago</span>
+								</div>
+								<div class="reactionButtons">
+									<Icon name="threeDots" class="icon" />
+									<Icon name="plus" class="icon" />
+									<Icon name="minus" class="icon" />
+									<Icon name="reply" class="icon" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="commentText">
+						Rorem ipsum, dolor sit amet. Gaudeamus itur, nortradamus to chaltur.
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="threadContainer">
@@ -471,13 +499,22 @@
 				}
 			}
 			.reply {
-				padding: var(--px8) var(--px8) var(--px8) var(--px12);
-				border-bottom-left-radius: var(--px16);
+				padding: var(--px8) var(--px8) var(--px12) var(--px12);
+				border-bottom-left-radius: var(--px32);
 				border-left: var(--px2) solid transparent;
 				border-bottom: var(--px1) solid transparent;
 				background:
 					linear-gradient(var(--black), var(--black)) padding-box,
-					linear-gradient(90deg, var(--gray60) 0%, black 50%) border-box;
+					linear-gradient(90deg, var(--gray60) 0%, black 40%) border-box;
+				.reply {
+					background:
+						linear-gradient(var(--black), var(--black)) padding-box,
+						linear-gradient(90deg, var(--gray60) 0%, black 50%) border-box;
+					border-bottom-left-radius: var(--px16);
+					.commentText {
+						margin-bottom: calc(var(--px1) * -4);
+					}
+				}
 			}
 		}
 	}
