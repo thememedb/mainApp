@@ -426,11 +426,12 @@
 					}
 					.user-info {
 						color: var(--gray90);
-						height: 100%;
+						height: var(--px48);
 						display: flex;
 						flex-direction: column;
 						align-items: flex-start;
-						gap: var(--px2);
+						justify-content: flex-end;
+						gap: var(--px4);
 						.username {
 							display: flex;
 							align-items: center;
@@ -445,8 +446,7 @@
 						}
 						.bottom {
 							display: flex;
-							align-items: end;
-							justify-content: flex-start;
+							align-items: center;
 							gap: var(--px8);
 							.score-time {
 								color: var(--gray80);
