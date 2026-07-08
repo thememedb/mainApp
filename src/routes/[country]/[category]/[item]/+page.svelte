@@ -403,14 +403,9 @@
 		}
 		.threadContainer {
 			padding: 0 0 var(--px32) 0;
-			/* &:last-child {
+			&:last-child {
 				padding-bottom: 0;
-			} */
-			/* display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: flex-start;
-			gap: var(--px32); */
+			}
 			.comment {
 				.user {
 					padding-bottom: var(--px8);
@@ -493,7 +488,7 @@
 	}
 	.end {
 		display: flex;
-		align-items: top;
+		align-items: center;
 		justify-content: center;
 		height: var(--px48);
 	}
