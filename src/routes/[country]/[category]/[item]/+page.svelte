@@ -158,8 +158,8 @@
 						</div>
 						<div class="reactionButtons">
 							<Icon name="threeDots" class="icon" />
-							<Icon name="plus" class="icon" />
 							<Icon name="minus" class="icon" />
+							<Icon name="plus" class="icon" />
 							<Icon name="reply" class="icon" />
 						</div>
 					</div>
@@ -187,8 +187,8 @@
 						</div>
 						<div class="reactionButtons">
 							<Icon name="threeDots" class="icon" />
-							<Icon name="plus" class="icon" />
 							<Icon name="minus" class="icon" />
+							<Icon name="plus" class="icon" />
 							<Icon name="reply" class="icon" />
 						</div>
 					</div>
@@ -217,8 +217,8 @@
 							</div>
 							<div class="reactionButtons">
 								<Icon name="threeDots" class="icon" />
-								<Icon name="plus" class="icon" />
 								<Icon name="minus" class="icon" />
+								<Icon name="plus" class="icon" />
 								<Icon name="reply" class="icon" />
 							</div>
 						</div>
@@ -234,7 +234,7 @@
 						<img src="/userAvatars/3.jpg" alt="user avatar" />
 						<div class="user-info">
 							<div class="username">
-								<span>Space Man</span>
+								<span>Space Man of the moon</span>
 								<MoneyFilled class="icon" />
 							</div>
 							<div class="bottom">
@@ -244,8 +244,8 @@
 								</div>
 								<div class="reactionButtons">
 									<Icon name="threeDots" class="icon" />
-									<Icon name="plus" class="icon" />
 									<Icon name="minus" class="icon" />
+									<Icon name="plus" class="icon" />
 									<Icon name="reply" class="icon" />
 								</div>
 							</div>
@@ -274,8 +274,8 @@
 						</div>
 						<div class="reactionButtons">
 							<Icon name="threeDots" class="icon" />
-							<Icon name="plus" class="icon" />
 							<Icon name="minus" class="icon" />
+							<Icon name="plus" class="icon" />
 							<Icon name="reply" class="icon" />
 						</div>
 					</div>
@@ -469,15 +469,16 @@
 						}
 						.bottom {
 							display: flex;
-							align-items: center;
+							align-items: flex-end;
 							gap: var(--px8);
 							.score-time {
 								color: var(--gray80);
 								font-weight: 400;
-								line-height: 1.4;
+								line-height: 1;
 								font-size: var(--px14);
 							}
 							.reactionButtons {
+								margin-bottom: calc(var(--px1) * -6);
 								display: flex;
 								align-items: end;
 								justify-content: flex-start;
@@ -499,7 +500,8 @@
 				}
 			}
 			.reply {
-				padding: var(--px8) var(--px8) var(--px12) var(--px12);
+				margin-left: var(--px1);
+				padding: calc(var(--px1) * 11) 0 var(--px12) var(--px12);
 				border-bottom-left-radius: var(--px24);
 				border-left: var(--px2) solid transparent;
 				border-bottom: var(--px1) solid transparent;
