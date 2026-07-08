@@ -83,7 +83,7 @@ html.dark {
 }
 body {
 	color: white;
-	background: var(--gray01);
+	background: var(--black);
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 700;
@@ -107,6 +107,8 @@ textarea,
 select {
 	font: inherit;
 }
+span,
+div,
 p,
 h1,
 h2,

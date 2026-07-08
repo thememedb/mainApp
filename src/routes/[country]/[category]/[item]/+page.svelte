@@ -231,10 +231,10 @@
 			<div class="reply">
 				<div class="comment">
 					<div class="user">
-						<img src="/userAvatars/4.jpg" alt="user avatar" />
+						<img src="/userAvatars/3.jpg" alt="user avatar" />
 						<div class="user-info">
 							<div class="username">
-								<span>FermBoy</span>
+								<span>Space Man</span>
 								<MoneyFilled class="icon" />
 							</div>
 							<div class="bottom">
@@ -500,17 +500,17 @@
 			}
 			.reply {
 				padding: var(--px8) var(--px8) var(--px12) var(--px12);
-				border-bottom-left-radius: var(--px28);
+				border-bottom-left-radius: var(--px24);
 				border-left: var(--px2) solid transparent;
 				border-bottom: var(--px1) solid transparent;
 				background:
 					linear-gradient(var(--black), var(--black)) padding-box,
-					linear-gradient(90deg, var(--gray60) 0%, black 60%) border-box;
+					linear-gradient(90deg, var(--gray60) 0%, var(--gray15) 35%, black 70%) border-box;
 				.reply {
 					background:
 						linear-gradient(var(--black), var(--black)) padding-box,
-						linear-gradient(90deg, var(--gray60) 0%, var(--gray40) 20%, black 100%) border-box;
-					border-bottom-left-radius: var(--px16);
+						linear-gradient(90deg, var(--gray60) 0%, var(--gray15) 45%, black 90%) border-box;
+					border-bottom-left-radius: var(--px12);
 					.commentText {
 						margin-bottom: calc(var(--px1) * -4);
 					}
