@@ -427,7 +427,7 @@
 			}
 		}
 		&.comments {
-			padding: var(--px16) 0 0 var(--leftpad);
+			padding: var(--px16) var(--px8) 0 var(--leftpad);
 		}
 		.threadContainer {
 			padding: 0 0 var(--px32) 0;
