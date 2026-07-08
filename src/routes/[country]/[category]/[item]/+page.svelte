@@ -9,7 +9,7 @@
 	<img class="image" src={'https://img.pr0gramm.com/' + data.thumb} alt="full meme" />
 </div>
 
-<div class="user container">
+<div class="postUser container">
 	<div class="user">
 		<img src="/userAvatars/5.jpg" alt="user avatar" />
 		<div class="user-info">
@@ -196,6 +196,34 @@
 			versicherten ihn für 50 Dollar und sendeten ihn zur Grossmutter." Das sind umgerechnet heute
 			1600€.
 		</div>
+		<div class="reply">
+			<div class="comment">
+				<div class="user">
+					<img src="/userAvatars/4.jpg" alt="user avatar" />
+					<div class="user-info">
+						<div class="username">
+							<span>FermBoy</span>
+							<MoneyFilled class="icon" />
+						</div>
+						<div class="bottom">
+							<div class="score-time">
+								<span class="score">+17 • </span>
+								<span class="time">1min ago</span>
+							</div>
+							<div class="reactions">
+								<Icon name="threeDots" class="icon" />
+								<Icon name="plus" class="icon" />
+								<Icon name="minus" class="icon" />
+								<Icon name="reply" class="icon" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="commentText">
+					Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="comment">
 		<div class="user">
@@ -234,11 +262,11 @@
 		position: relative;
 		width: 100%;
 		height: max-content;
-		&.user {
+		&.postUser {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: calc(12 * var(--px1)) var(--px8) var(--px16) 0;
+			padding: calc(12 * var(--px1)) var(--px8) var(--px16) var(--leftpad);
 			.user {
 				display: flex;
 				align-items: center;
@@ -292,6 +320,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
+			padding-left: var(--leftpad);
 			.icons {
 				background: linear-gradient(
 					to bottom,
@@ -355,83 +384,94 @@
 			display: flex;
 			align-items: center;
 			gap: var(--px8);
-			padding: var(--px16) 0;
+			padding: var(--px16) 0 var(--px16) var(--leftpad);
 			&::-webkit-scrollbar {
 				display: none;
 			}
 		}
 		&.comments {
-			padding: var(--px16) 0;
-			.comment {
-				padding: 0 0 var(--px32) 0;
-				&:last-child {
-					padding-bottom: 0;
-				}
+			padding: var(--px16) 0 0 var(--leftpad);
+		}
+		.comment {
+			padding: 0 0 var(--px32) 0;
+			&:last-child {
+				padding-bottom: 0;
+			}
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: var(--px8);
+			.user {
 				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
+				align-items: center;
 				justify-content: flex-start;
-				gap: var(--px8);
-				.user {
+				gap: var(--px12);
+				font-size: var(--px20);
+				img {
+					width: var(--px48);
+					height: var(--px48);
+					border-radius: 100%;
+				}
+				.user-info {
+					color: var(--gray90);
+					height: 100%;
 					display: flex;
-					align-items: center;
-					justify-content: flex-start;
-					gap: var(--px12);
-					font-size: var(--px20);
-					img {
-						width: var(--px48);
-						height: var(--px48);
-						border-radius: 100%;
-					}
-					.user-info {
-						color: var(--gray90);
-						height: 100%;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: var(--px2);
+					.username {
 						display: flex;
-						flex-direction: column;
-						align-items: flex-start;
-						gap: var(--px2);
-						.username {
-							display: flex;
-							align-items: center;
-							justify-content: flex-start;
-							gap: var(--px4);
-							font-size: var(--px20);
-							font-weight: 500;
-							:global(.icon) {
-								width: var(--px20);
-								height: var(--px20);
-							}
+						align-items: center;
+						justify-content: flex-start;
+						gap: var(--px4);
+						font-size: var(--px20);
+						font-weight: 500;
+						:global(.icon) {
+							width: var(--px20);
+							height: var(--px20);
 						}
-						.bottom {
+					}
+					.bottom {
+						display: flex;
+						align-items: end;
+						justify-content: flex-start;
+						gap: var(--px8);
+						.score-time {
+							color: var(--gray80);
+							font-weight: 400;
+							line-height: 1.4;
+							font-size: var(--px14);
+						}
+						.reactions {
 							display: flex;
 							align-items: end;
 							justify-content: flex-start;
 							gap: var(--px8);
-							.score-time {
-								color: var(--gray80);
-								font-weight: 400;
-								line-height: 1.4;
-								font-size: var(--px14);
-							}
-							.reactions {
-								display: flex;
-								align-items: end;
-								justify-content: flex-start;
-								gap: var(--px8);
-								:global(.icon) {
-									color: var(--gray60);
-									width: var(--px24);
-									height: var(--px24);
-								}
+							:global(.icon) {
+								color: var(--gray60);
+								width: var(--px24);
+								height: var(--px24);
 							}
 						}
 					}
 				}
-				.commentText {
-					font-size: var(--px18);
-					font-weight: 400;
-					color: var(--gray90);
-					line-height: 1.33333;
+			}
+			.commentText {
+				font-size: var(--px18);
+				font-weight: 400;
+				color: var(--gray90);
+				line-height: 1.33333;
+			}
+			.reply {
+				border-bottom-left-radius: 16px;
+				border-left: 2px solid transparent;
+				border-bottom: 1px solid transparent;
+				background:
+					linear-gradient(var(--gray01), var(--gray01)) padding-box,
+					linear-gradient(90deg, var(--gray60) 0%, black 50%) border-box;
+				.comment {
+					padding: 0 0 8px 8px;
 				}
 			}
 		}
