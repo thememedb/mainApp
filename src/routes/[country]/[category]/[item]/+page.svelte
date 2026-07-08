@@ -455,7 +455,7 @@
 								justify-content: flex-start;
 								gap: var(--px8);
 								:global(.icon) {
-									color: var(--gray60);
+									color: var(--gray50);
 									width: var(--px24);
 									height: var(--px24);
 								}
@@ -466,7 +466,7 @@
 				.commentText {
 					font-size: var(--px18);
 					font-weight: 400;
-					color: var(--gray90);
+					color: var(--gray80);
 					line-height: 1.33333;
 				}
 			}
@@ -476,13 +476,8 @@
 				border-left: var(--px2) solid transparent;
 				border-bottom: var(--px1) solid transparent;
 				background:
-				/* linear-gradient(var(--gray01), var(--gray01)) padding-box, */
 					linear-gradient(var(--black), var(--black)) padding-box,
 					linear-gradient(90deg, var(--gray60) 0%, black 50%) border-box;
-				/* .comment {
-					padding: 0 0 var(--px8) var(--px8);
-					margin-bottom: -5px;
-				} */
 			}
 		}
 	}
