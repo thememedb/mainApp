@@ -500,16 +500,16 @@
 			}
 			.reply {
 				padding: var(--px8) var(--px8) var(--px12) var(--px12);
-				border-bottom-left-radius: var(--px32);
+				border-bottom-left-radius: var(--px28);
 				border-left: var(--px2) solid transparent;
 				border-bottom: var(--px1) solid transparent;
 				background:
 					linear-gradient(var(--black), var(--black)) padding-box,
-					linear-gradient(90deg, var(--gray60) 0%, black 40%) border-box;
+					linear-gradient(90deg, var(--gray60) 0%, black 60%) border-box;
 				.reply {
 					background:
 						linear-gradient(var(--black), var(--black)) padding-box,
-						linear-gradient(90deg, var(--gray60) 0%, black 50%) border-box;
+						linear-gradient(90deg, var(--gray60) 0%, var(--gray40) 20%, black 100%) border-box;
 					border-bottom-left-radius: var(--px16);
 					.commentText {
 						margin-bottom: calc(var(--px1) * -4);
