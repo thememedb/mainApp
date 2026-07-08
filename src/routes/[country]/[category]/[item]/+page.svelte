@@ -367,12 +367,12 @@
 				flex-direction: column;
 				align-items: flex-start;
 				justify-content: flex-start;
-				gap: var(--px2);
+				gap: var(--px8);
 				.user {
 					display: flex;
 					align-items: center;
 					justify-content: flex-start;
-					gap: var(--px8);
+					gap: var(--px12);
 					font-size: var(--px20);
 					img {
 						width: var(--px48);
