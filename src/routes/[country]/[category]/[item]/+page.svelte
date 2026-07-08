@@ -14,7 +14,7 @@
 		<img src="/userAvatars/5.jpg" alt="user avatar" />
 		<div class="user-info">
 			<div class="username">
-				<span>arestedDevelopmentsu</span>
+				<span>JrestedDevelopmentsu</span>
 				<MoneyFilled class="icon" />
 			</div>
 			<div class="score-time">
@@ -238,12 +238,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: var(--px16) var(--px8) var(--px16) 0;
+			padding: calc(12 * var(--px1)) var(--px8) var(--px16) 0;
 			.user {
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
 				gap: var(--px8);
+				gap: calc(10 * var(--px1));
 				font-size: var(--px20);
 				img {
 					width: var(--px48);
@@ -362,7 +363,10 @@
 		&.comments {
 			padding: var(--px16) 0;
 			.comment {
-				padding: 0 0 var(--px16) 0;
+				padding: 0 0 var(--px32) 0;
+				&:last-child {
+					padding-bottom: 0;
+				}
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
