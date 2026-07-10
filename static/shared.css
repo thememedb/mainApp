@@ -145,3 +145,9 @@ h6 {
 :root {
 	isolation: isolate;
 }
+.container {
+	position: relative;
+	width: 100%;
+	height: max-content;
+	padding-left: var(--leftpad);
+}
