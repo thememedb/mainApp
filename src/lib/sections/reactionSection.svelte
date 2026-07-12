@@ -110,15 +110,6 @@
 		align-items: center;
 		justify-content: flex-start;
 		.icons {
-			background: linear-gradient(
-				to bottom,
-				rgba(0, 0, 0, 0) 0%,
-				rgba(0, 0, 0, 0.96) 30%,
-				rgba(0, 0, 0, 0.9) 80%,
-				rgba(0, 0, 0, 0.85) 90%,
-				rgba(0, 0, 0, 0.8) 97%,
-				rgba(0, 0, 0, 0) 100%
-			);
 			flex: 0 0 auto;
 			display: flex;
 			align-items: center;

@@ -7,6 +7,9 @@
 </div>
 
 <style>
+	.media {
+		padding-left: 0;
+	}
 	img {
 		width: 100%;
 		height: auto;

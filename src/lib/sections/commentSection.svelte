@@ -1,8 +1,21 @@
 <script>
-	import { Icon } from '$lib';
+	import { Icon, Comment } from '$lib';
 	import MoneyFilled from '$lib/assets/icons/complex/moneyFilled.svelte';
+	let comment = {
+		user:{
+			id: 321321,
+			name: "FermBoy",
+			avatar: "/userAvatars/4.jpg",
+			icon: "bot"
+		},
+		comment:"Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.",
+		time: "2min ago",
+		rank: 26,
+		vote: null,
+	}
 </script>
 
+<Comment {comment} />
 <div class="comments container">
 	<div class="threadContainer">
 		<div class="comment">
@@ -161,13 +174,12 @@
 	.threadContainer {
 		display: flex;
 		flex-direction: column;
-		gap: var(--px12);
+		gap: var(--px16);
 		padding: calc(var(--px1) * 12) 0 var(--px8) var(--px12);
 		border-top-left-radius: calc(var(--px1) * 36);
 		border-bottom-left-radius: var(--px16);
 		border-left: calc(var(--px1) * 2) solid transparent;
 		border-bottom: calc(var(--px1) * 1) solid transparent;
-		corner-shape: superellipse(0.1);
 		background:
 			linear-gradient(var(--black), var(--black)) padding-box,
 			linear-gradient(90deg, var(--gray60) 0%, var(--gray15) 35%, black 70%) border-box;

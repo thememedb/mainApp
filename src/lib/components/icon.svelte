@@ -15,6 +15,8 @@
 	let { name, ...props } = $props();
 </script>
 
+
+
 <svg
 	width="24"
 	height="24"

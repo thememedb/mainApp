@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { Tags, Reactions, PostUser, Media, Comments, Footer } from '$lib';
+	import { TagSection, ReactionSection, UserSection, MediaSection, CommentSection, FooterSection } from '$lib';
 	let { data } = $props();
 </script>
 
-<Media {data} />
-<PostUser />
-<Reactions />
-<Tags />
-<Comments />
-<Footer />
+<MediaSection {data} />
+<UserSection />
+<ReactionSection />
+<TagSection />
+<CommentSection />
+<FooterSection />

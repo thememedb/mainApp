@@ -1,8 +1,9 @@
-export { default as Tag } from './components/tag.svelte';
-export { default as Tags } from './components/tags.svelte';
-export { default as Reactions } from './components/reactions.svelte';
+export { default as CommentSection } from './sections/commentSection.svelte';
+export { default as FooterSection } from './sections/footerSection.svelte';
+export { default as MediaSection } from './sections/mediaSection.svelte';
+export { default as ReactionSection } from './sections/reactionSection.svelte';
+export { default as TagSection } from './sections/tagSection.svelte';
+export { default as UserSection } from './sections/userSection.svelte';
+export { default as Comment } from './components/comment.svelte';
 export { default as Icon } from './components/icon.svelte';
-export { default as PostUser } from './components/postUser.svelte';
-export { default as Media } from './components/media.svelte';
-export { default as Comments } from './components/comments.svelte';
-export { default as Footer } from './components/footer.svelte';
+export { default as Tag } from './components/tag.svelte';

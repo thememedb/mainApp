@@ -5,6 +5,7 @@ html {
 	--px4: calc(4 * var(--px1));
 	--px8: calc(8 * var(--px1));
 	--px12: calc(12 * var(--px1));
+	--px10: calc(10 * var(--px1));
 	--px14: calc(14 * var(--px1));
 	--px16: calc(16 * var(--px1));
 	--px18: calc(18 * var(--px1));
