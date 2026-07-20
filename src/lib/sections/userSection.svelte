@@ -1,16 +1,12 @@
 <script>
-	import { Icon } from '$lib';
-	import MoneyFilled from '$lib/assets/icons/complex/moneyFilled.svelte';
+	import { Icon, StatusIcon, Username } from '$lib';
 </script>
 
 <div class="postUser container">
 	<div class="user">
 		<img src="/userAvatars/5.jpg" alt="user avatar" />
 		<div class="user-info">
-			<div class="username">
-				<span>JrestedDevelopmentsu</span>
-				<MoneyFilled class="icon" />
-			</div>
+			<Username name="BybisH H" icon="verified" />
 			<div class="score-time">
 				<span class="score">+692 • </span>
 				<span class="time">12min ago</span>
@@ -43,21 +39,12 @@
 				border-radius: 100%;
 			}
 			.user-info {
+				height: var(--px48);
 				display: flex;
 				flex-direction: column;
-				gap: var(--px8);
-				.username {
-					display: flex;
-					align-items: center;
-					justify-content: flex-start;
-					gap: var(--px4);
-					font-size: var(--px20);
-					font-weight: 500;
-					:global(.icon) {
-						width: var(--px20);
-						height: var(--px20);
-					}
-				}
+				align-items: flex-start;
+				justify-content: flex-end;
+				gap: var(--px4);
 				.score-time {
 					color: var(--gray80);
 					font-weight: 400;

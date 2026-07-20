@@ -3,6 +3,7 @@ html {
 	--px1: calc(100cqw / 376);
 	--px2: calc(2 * var(--px1));
 	--px4: calc(4 * var(--px1));
+	--px5: calc(5 * var(--px1));
 	--px8: calc(8 * var(--px1));
 	--px12: calc(12 * var(--px1));
 	--px10: calc(10 * var(--px1));

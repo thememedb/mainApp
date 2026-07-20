@@ -1,23 +1,30 @@
 <script>
-	import MoneyFilled from '$lib/assets/icons/complex/moneyFilled.svelte';
-	import { Icon } from '$lib';
-	import StatusIcon from './statusIcon.svelte';
+	let casdfomment = {
+		user: {
+			id: 321321,
+			name: 'FermBoy',
+			avatar: '/userAvatars/4.jpg',
+			icon: 'bot'
+		},
+		comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
+		time: '2min ago',
+		rank: 26,
+		vote: null
+	};
+	import { Icon, Username } from '$lib';
 	let { comment } = $props();
+	let { user, comment: commentText, time, rank, vote } = $derived(comment);
 </script>
 
 <div class="comment">
 	<div class="user">
-		<img src="/userAvatars/4.jpg" alt="user avatar" />
+		<img src={user.avatar} alt="user avatar" />
 		<div class="user-info">
-			<div class="username">
-				<span>FermBoy</span>
-				<StatusIcon name="square" />
-				<!-- <MoneyFilled class="icon" /> -->
-			</div>
+			<Username name={user.name} icon={user.icon} />
 			<div class="bottom">
 				<div class="score-time">
-					<span class="score">+17 • </span>
-					<span class="time">1min ago</span>
+					<span class="score">{rank > 0 ? '+' : ''}{rank} • </span>
+					<span class="time">{time}</span>
 				</div>
 				<div class="reactionButtons">
 					<Icon name="threeDots" class="icon" />
@@ -29,7 +36,7 @@
 		</div>
 	</div>
 	<div class="commentText">
-		Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.
+		{commentText}
 	</div>
 </div>
 
@@ -55,29 +62,6 @@
 				align-items: flex-start;
 				justify-content: flex-end;
 				gap: var(--px4);
-				.username {
-					height: var(--px20);
-					display: flex;
-					align-items: baseline;
-					gap: var(--px4);
-					font-size: var(--px20);
-					font-weight: 500;
-					:global(&:has(> .icon.big)) {
-						/* background-color: red; */
-						align-items: center;
-					}
-					:global(.icon) {
-						display: inline-block;
-						width: var(--px16);
-						height: var(--px16);
-						&.big {
-							width: var(--px20);
-							height: var(--px20);
-							/* transform: scale(1.25) translateY(var(--px1)); */
-						}
-					}
-				}
-
 				.bottom {
 					display: flex;
 					align-items: flex-end;
