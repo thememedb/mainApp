@@ -31,6 +31,5 @@
 	.square {
 		aspect-ratio: 1;
 		background-color: var(--gray40);
-		/* border-radius: 8px; */
 	}
 </style>

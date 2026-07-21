@@ -1,10 +1,9 @@
 <script>
-	let { item } = $props();
-	// console.log(data);
+	let { media } = $props();
 </script>
 
 <div class="media container">
-	<img class="image" src={'https://img.pr0gramm.com/' + item.thumb} alt="full meme" />
+	<img class="image" src={'https://img.pr0gramm.com/' + media.thumb} alt="full meme" />
 </div>
 
 <style>

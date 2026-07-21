@@ -8,12 +8,12 @@
 		FooterSection
 	} from '$lib';
 	let { data } = $props();
-	let { item, comments } = $derived(data);
+	let { media, user, reactions, tags, comments } = $derived(data);
 </script>
 
-<MediaSection {item} />
-<UserSection />
-<ReactionSection />
-<TagSection />
+<MediaSection {media} />
+<UserSection {user} />
+<ReactionSection {reactions} />
+<TagSection {tags} />
 <CommentSection {comments} />
 <FooterSection />

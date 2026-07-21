@@ -153,3 +153,7 @@ h6 {
 	height: max-content;
 	padding-left: var(--leftpad);
 }
+a {
+	text-decoration: none;
+	color: inherit;
+}

@@ -1,15 +1,19 @@
-<script>
-	import { Icon, StatusIcon, Username } from '$lib';
+<script lang="ts">
+	import { Icon, Username } from '$lib';
+	import { showScore, showTimeAgo } from '$lib/utils/utils';
+	let { user } = $props();
+	let { name, avatar, id, time, score } = $derived(user);
+	const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 </script>
 
 <div class="postUser container">
 	<div class="user">
-		<img src="/userAvatars/5.jpg" alt="user avatar" />
+		<img src={avatar} alt="Users Avatar" />
 		<div class="user-info">
-			<Username name="BybisH H" icon="verified" />
+			<Username {name} icon="verified" />
 			<div class="score-time">
-				<span class="score">+692 • </span>
-				<span class="time">12min ago</span>
+				<span class="score">{showScore(score)} • </span>
+				<span class="time">{showTimeAgo(time)}</span>
 			</div>
 		</div>
 	</div>

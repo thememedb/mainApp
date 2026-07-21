@@ -3,10 +3,12 @@
 	let { name, icon } = $props();
 </script>
 
-<div class="username">
-	<span>{name}</span>
-	<StatusIcon name={icon} />
-</div>
+<a href="/">
+	<div class="username">
+		<span>{name}</span>
+		<StatusIcon name={icon} />
+	</div>
+</a>
 
 <style>
 	.username {

@@ -1,5 +1,6 @@
 <script>
 	import { Tag } from '$lib';
+	let { tags } = $props();
 </script>
 
 <div class="tags container">

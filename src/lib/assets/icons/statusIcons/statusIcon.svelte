@@ -20,7 +20,7 @@
 		square: Square,
 		squareBig: SquareBig
 	};
-	const bigIcons = ['rich', 'coins', 'donator', 'squareBig'];
+	const bigIcons = ['coins', 'donator', 'rich', 'squareBig'];
 	let { name, ...props } = $props();
 	const Icon = $derived(icons[name as keyof typeof icons] ?? Error);
 	const isBig = $derived(bigIcons.includes(name));

@@ -1,5 +1,6 @@
 <script>
 	import { Icon } from '$lib';
+	let { reactions } = $props();
 </script>
 
 <div class="reactions container">

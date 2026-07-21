@@ -1,17 +1,6 @@
 <script>
-	let casdfomment = {
-		user: {
-			id: 321321,
-			name: 'FermBoy',
-			avatar: '/userAvatars/4.jpg',
-			icon: 'bot'
-		},
-		comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
-		time: '2min ago',
-		rank: 26,
-		vote: null
-	};
 	import { Icon, Username } from '$lib';
+	import { showScore, showTimeAgo } from '$lib/utils/utils';
 	let { comment } = $props();
 	let { user, comment: commentText, time, rank, vote } = $derived(comment);
 </script>
@@ -23,14 +12,22 @@
 			<Username name={user.name} icon={user.icon} />
 			<div class="bottom">
 				<div class="score-time">
-					<span class="score">{rank > 0 ? '+' : ''}{rank} • </span>
-					<span class="time">{time}</span>
+					<span class="score">{showScore(rank)} • </span>
+					<span class="time">{showTimeAgo(time)}</span>
 				</div>
 				<div class="reactionButtons">
-					<Icon name="threeDots" class="icon" />
-					<Icon name="minus" class="icon" />
-					<Icon name="plus" class="icon" />
-					<Icon name="reply" class="icon" />
+					<a href="/">
+						<Icon name="threeDots" class="icon" />
+					</a>
+					<a href="/">
+						<Icon name="minus" class="icon" />
+					</a>
+					<a href="/">
+						<Icon name="plus" class="icon" />
+					</a>
+					<a href="/">
+						<Icon name="reply" class="icon" />
+					</a>
 				</div>
 			</div>
 		</div>

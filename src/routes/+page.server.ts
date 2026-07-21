@@ -1,7 +1,7 @@
-import thumbs from '$lib/assets/thumbs.json';
+import { thumbs } from '$lib';
 
 export async function load() {
 	return {
-		items: thumbs.items ?? []
+		items: thumbs.items
 	};
 }

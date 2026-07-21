@@ -1,4 +1,4 @@
-import thumbs from '$lib/assets/thumbs.json';
+import { thumbs } from '$lib';
 
 let comment1 = {
 	user: {
@@ -8,7 +8,7 @@ let comment1 = {
 		icon: 'coins'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
-	time: '2min ago',
+	time: new Date(Date.now() - 10 * 60 * 1000).toISOString(),
 	rank: 26,
 	vote: null
 };
@@ -20,7 +20,7 @@ let comment2 = {
 		icon: 'starSolid'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
-	time: '2min ago',
+	time: new Date(Date.now() - 10 * 60 * 60 * 1000).toISOString(),
 	rank: 26,
 	vote: null
 };
@@ -32,17 +32,24 @@ let comment3 = {
 		icon: 'verified'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
-	time: '2min ago',
+	time: new Date(Date.now() - 8 * 24 * 60 * 60 * 1000).toISOString(),
 	rank: 26,
 	vote: null
 };
 let comments = [[comment1], [comment1, comment2, comment3], [comment2]];
 
 export async function load({ params }) {
-	const item = thumbs.items.find((item) => item.id === Number(params.item));
-
 	const post = {
-		item: item,
+		media: thumbs.items.find((item) => item.id === Number(params.item)),
+		user: {
+			name: 'Kosmonautas Petras',
+			avatar: '/userAvatars/3.jpg',
+			id: 'asdf6a8sd47f36as5d7f357',
+			time: new Date(Date.now() - 10 * 60 * 60 * 1000).toISOString(),
+			score: 692
+		},
+		reactions: {},
+		tags: [],
 		comments: comments
 	};
 	return post;

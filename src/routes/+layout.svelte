@@ -67,9 +67,7 @@
 			gap: var(--px16);
 			padding: var(--px16);
 			z-index: 1000;
-			a {
-				text-decoration: none;
-			}
+			
 			.logo {
 				--gradient: linear-gradient(
 					-150deg,
