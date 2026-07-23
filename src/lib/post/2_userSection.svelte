@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { Icon, Username } from '$lib';
-	import { showScore, showTimeAgo } from '$lib/utils/utils';
+	import { Icon, Username, Score, Time } from '$lib';
+
 	let { user } = $props();
 	let { name, avatar, id, time, score } = $derived(user);
-	const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 </script>
 
 <div class="postUser container">
@@ -12,8 +11,8 @@
 		<div class="user-info">
 			<Username {name} icon="verified" />
 			<div class="score-time">
-				<span class="score">{showScore(score)} • </span>
-				<span class="time">{showTimeAgo(time)}</span>
+				<Score {score} />
+				<Time {time} />
 			</div>
 		</div>
 	</div>
@@ -31,6 +30,7 @@
 		justify-content: space-between;
 		padding-top: var(--px16);
 		padding-right: var(--px8);
+		gap: var(--px8);
 		.user {
 			display: flex;
 			align-items: center;
@@ -48,14 +48,19 @@
 				flex-direction: column;
 				align-items: flex-start;
 				justify-content: flex-end;
-				gap: var(--px4);
+				gap: var(--px8);
 				.score-time {
 					color: var(--gray80);
 					font-weight: 400;
-					.score {
+					line-height: 0.8;
+					:global(.score) {
 						font-size: var(--px20);
 					}
-					.time {
+					:global(.time) {
+						font-size: var(--px18);
+					}
+					:global(.date) {
+						font-weight: 425;
 						font-size: var(--px18);
 					}
 				}

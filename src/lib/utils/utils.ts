@@ -1,13 +1,3 @@
-import {
-	differenceInDays,
-	differenceInHours,
-	differenceInMinutes,
-	differenceInMonths,
-	differenceInWeeks,
-	differenceInYears,
-	formatDistanceToNowStrict
-} from 'date-fns';
-
 export function showScore(score: number) {
 	return `${score > 0 ? '+' : ''}${score}`;
 }
@@ -17,28 +7,47 @@ export function showTime(time: string) {
 	return new Date(time).toLocaleString('lt-LT', { timeZone });
 }
 
-export function showTimeAgo(time: string) {
-	const referenceDate = new Date(time);
-	const now = new Date();
-	const diffMs = now.getTime() - referenceDate.getTime();
+export const dateFormatShort = new Intl.DateTimeFormat('en-US', {
+	month: 'long',
+	day: 'numeric'
+});
+export const dateFormatFull = new Intl.DateTimeFormat('lt-LT', {
+	month: 'short',
+	day: 'numeric',
+	year: 'numeric'
+});
+export const dateFormatRelative = new Intl.RelativeTimeFormat("en-GB", {
+	numeric: 'auto',
+	style: 'short'
 
-	if (diffMs < 60 * 1000) return 'just now';
+});
 
-	const diffMinutes = differenceInMinutes(now, referenceDate);
-	if (diffMinutes < 60) return `${diffMinutes} min ago`;
+// let cachedLocale = '';
+// let shortDateFormatter: Intl.DateTimeFormat | null = null;
+// let relativeFormatter: Intl.RelativeTimeFormat | null = null;
 
-	const diffHours = differenceInHours(now, referenceDate);
-	if (diffHours < 24) return `${diffHours} hour${diffHours === 1 ? '' : 's'} ago`;
+// export function getShortDateFormatter() {
+// 	const locale = navigator.language;
 
-	const diffDays = differenceInDays(now, referenceDate);
-	if (diffDays < 7) return `${diffDays} day${diffDays === 1 ? '' : 's'} ago`;
+// 	if (!shortDateFormatter || locale !== cachedLocale) {
+// 		cachedLocale = locale;
+// 		shortDateFormatter = new Intl.DateTimeFormat(locale, {
+// 			month: 'long',
+// 			day: 'numeric'
+// 		});
+// 	}
 
-	const diffWeeks = differenceInWeeks(now, referenceDate, { roundingMethod: 'floor' });
-	if (diffWeeks < 4) return `${diffWeeks} week${diffWeeks === 1 ? '' : 's'} ago`;
+// 	return shortDateFormatter;
+// }
+// export function getRelativeTimeFormatter() {
+// 	const locale = navigator.language;
 
-	const diffMonths = differenceInMonths(now, referenceDate);
-	if (diffMonths < 12) return `${diffMonths} month${diffMonths === 1 ? '' : 's'} ago`;
+// 	if (!relativeFormatter || cachedLocale !== locale) {
+// 		cachedLocale = locale;
+// 		relativeFormatter = new Intl.RelativeTimeFormat(locale, {
+// 			numeric: 'auto'
+// 		});
+// 	}
 
-	const diffYears = differenceInYears(now, referenceDate);
-	return `${diffYears} year${diffYears === 1 ? '' : 's'} ago`;
-}
+// 	return relativeFormatter;
+// }

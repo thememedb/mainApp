@@ -8,6 +8,7 @@
 		FooterSection
 	} from '$lib';
 	let { data } = $props();
+	
 	let { media, user, reactions, tags, comments } = $derived(data);
 </script>
 

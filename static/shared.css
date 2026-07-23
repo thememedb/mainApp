@@ -84,12 +84,6 @@ html.dark {
 *:not(dialog) {
 	margin: 0;
 }
-@media (prefers-reduced-motion: no-preference) {
-	html {
-		interpolate-size: allow-keywords;
-		/* can be made more default?? */
-	}
-}
 body {
 	color: white;
 	background: var(--black);
@@ -134,7 +128,6 @@ h6 {
 	overflow-wrap: break-word;
 }
 p {
-	text-wrap: pretty;
 	hyphens: auto;
 }
 h1,

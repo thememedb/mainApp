@@ -1,6 +1,5 @@
 <script>
-	import { Icon, Username } from '$lib';
-	import { showScore, showTimeAgo } from '$lib/utils/utils';
+	import { Icon, Username, Score, Time } from '$lib';
 	let { comment } = $props();
 	let { user, comment: commentText, time, rank, vote } = $derived(comment);
 </script>
@@ -12,8 +11,15 @@
 			<Username name={user.name} icon={user.icon} />
 			<div class="bottom">
 				<div class="score-time">
-					<span class="score">{showScore(rank)} • </span>
-					<span class="time">{showTimeAgo(time)}</span>
+					<Score score={rank} />
+					<Time {time} />
+					<!-- <span class="time">ago</span> -->
+					<!-- <span class="time">{showTimeAgo2(time)}</span> -->
+					<!-- <span class="time">
+						<span style="font-size: var(--px14)">26-</span>
+						<span style="font-size: calc(var(--px1) * 13)">07-</span>
+						<span style="font-size: var(--px12)">22</span>
+					</span> -->
 				</div>
 				<div class="reactionButtons">
 					<a href="/">
@@ -68,6 +74,17 @@
 						font-weight: 400;
 						line-height: 1;
 						font-size: var(--px14);
+						:global(.time) {
+							color: var(--gray70);
+						}
+						:global(&:has(> .date)) {
+							font-size: calc(var(--px1) * 15);
+							line-height: 0.75;
+						}
+						:global(.date) {
+							font-size: var(--px14);
+							color: var(--gray60);
+						}
 					}
 					.reactionButtons {
 						margin-bottom: calc(var(--px1) * -6);
@@ -86,9 +103,9 @@
 		}
 		.commentText {
 			margin-left: calc(var(--px1) * -1);
-			font-size: calc(var(--px1) * 16);
+			font-size: var(--px16);
 			font-weight: 400;
-			color: var(--gray80);
+			color: var(--gray90);
 			line-height: 1.25;
 		}
 	}
