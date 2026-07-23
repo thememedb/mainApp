@@ -92,7 +92,7 @@ let comment8 = {
 		icon: 'bot'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
-	time: "2025-01-11T23:00:00.000Z",
+	time: "2026-01-11T23:00:00.000Z",
 	rank: 126,
 	vote: null
 };
@@ -108,7 +108,7 @@ export async function load({ params }) {
 			name: 'Beprisikopūstkiškeliaud',
 			avatar: '/userAvatars/3.jpg',
 			id: 'asdf6a8sd47f36as5d7f357',
-			time: new Date(2025, 11, 3, 1, 30).toString(),
+			time: new Date(2026, 6, 3, 1, 30).toString(),
 			score: 692
 		},
 		reactions: {},
