@@ -73,9 +73,7 @@
 				height: 100%;
 				display: flex;
 				align-items: center;
-				font-size: calc(var(--px1) * 28 * var(--i));
-				font-weight: 700;
-				font-style: normal;
+				font-size: calc(var(--px28) * var(--i));
 			}
 		}
 	}
