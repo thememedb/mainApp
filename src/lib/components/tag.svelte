@@ -1,12 +1,13 @@
 <script lang="ts">
 	import Icon from '$lib/components/icon.svelte';
-	let { text } = $props();
+	let { tag } = $props();
+	let { id, score, text } = $derived(tag);
 </script>
 
 <div class="tag">
-	<Icon name="plus" class="icon" />
+	<Icon name="plus" />
 	<span>{text}</span>
-	<Icon name="minus" class="icon" />
+	<Icon name="minus" />
 </div>
 
 <style>

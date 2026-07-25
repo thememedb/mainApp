@@ -5,102 +5,16 @@
 
 <div class="reactions container">
 	<div class="icons">
-		<Icon name="plus" class="icon" />
-		<Icon name="minus" class="icon" />
-		<Icon name="heart" class="icon" />
-		<Icon name="smiley" class="icon" />
+		<Icon name="plus" />
+		<Icon name="minus" />
+		<Icon name="heart" />
+		<Icon name="tag" />
+		<Icon name="smiley" />
 	</div>
 	<div class="emojis">
-		<img src="/emojis/face-with-tears-of-joy_1f602.png" alt="emoji1" style="--i: 1;" />
-		<img src="/emojis/grinning-face-with-smiling-eyes_1f601.png" alt="emoji2" style="--i: 0.9;" />
-		<img src="/emojis/pile-of-poo_1f4a9.png" alt="emoji3" style="--i: {0.9 ** 2};" />
-		<img src="/emojis/grinning-face_1f600.png" alt="emoji3" style="--i: {0.9 ** 3};" />
-		<img src="/emojis/see-no-evil-monkey_1f648.png" alt="emoji3" style="--i: {0.9 ** 4};" />
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-cold-sweat_1f605.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 5};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-smiling-eyes_1f604.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 6};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 7};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 8};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 9};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 10};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 11};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 12};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 13};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 14};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 15};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 16};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 17};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 18};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 19};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 20};"
-		/>
-		<img
-			src="/emojis/smiling-face-with-open-mouth-and-tightly-closed-eyes_1f606.png"
-			alt="emoji3"
-			style="--i: {0.9 ** 21};"
-		/>
+		{#each reactions as reaction, i (reaction.id)}
+			<div class="emoji" style="--i: {0.925 ** i}">{reaction.emoji}</div>
+		{/each}
 	</div>
 </div>
 
@@ -110,6 +24,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
+		height: var(--px48);
 		.icons {
 			flex: 0 0 auto;
 			display: flex;
@@ -123,36 +38,44 @@
 			}
 		}
 		.emojis {
-			padding-left: var(--px24);
+			height: var(--px32);
+			padding-top: var(--px2);
+			padding-left: var(--px16);
 			flex: 1 1 auto;
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			gap: var(--px8);
+			gap: var(--px6);
 			overflow-x: scroll;
+			overflow-y: hidden;
 			scrollbar-width: none;
 			-ms-overflow-style: none;
 			-webkit-overflow-scrolling: touch;
 			mask-image: linear-gradient(
 				to right,
 				transparent,
-				rgba(0, 0, 0, 0.05) var(--px4),
-				rgba(0, 0, 0, 0.13) var(--px8),
-				rgba(0, 0, 0, 0.22) var(--px12),
-				rgba(0, 0, 0, 0.35) var(--px16),
-				rgba(0, 0, 0, 0.4) var(--px18),
-				rgba(0, 0, 0, 0.45) var(--px20),
-				rgba(0, 0, 0, 0.55) var(--px24),
-				rgba(0, 0, 0, 1) var(--px32),
-				rgba(0, 0, 0, 1) calc(100% - var(--px64)),
+				rgba(0, 0, 0, 0.04) var(--px4),
+				rgba(0, 0, 0, 0.16) var(--px8),
+				rgba(0, 0, 0, 0.25) var(--px10),
+				rgba(0, 0, 0, 0.36) var(--px12),
+				rgba(0, 0, 0, 0.49) var(--px14),
+				rgba(0, 0, 0, 0.64) var(--px16),
+				rgba(0, 0, 0, 0.81) var(--px18),
+				rgba(0, 0, 0, 1) var(--px22),
+				rgba(0, 0, 0, 1) 90%,
+				rgba(0, 0, 0, 0) 100%,
 				transparent
 			);
 			&::-webkit-scrollbar {
 				display: none;
 			}
-			img {
-				width: calc(var(--px28) * var(--i));
-				height: calc(var(--px28) * var(--i));
+			.emoji {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				font-size: calc(var(--px1) * 28 * var(--i));
+				font-weight: 700;
+				font-style: normal;
 			}
 		}
 	}

@@ -13,27 +13,12 @@
 				<div class="score-time">
 					<Score score={rank} />
 					<Time {time} />
-					<!-- <span class="time">ago</span> -->
-					<!-- <span class="time">{showTimeAgo2(time)}</span> -->
-					<!-- <span class="time">
-						<span style="font-size: var(--px14)">26-</span>
-						<span style="font-size: calc(var(--px1) * 13)">07-</span>
-						<span style="font-size: var(--px12)">22</span>
-					</span> -->
 				</div>
 				<div class="reactionButtons">
-					<a href="/">
-						<Icon name="threeDots" class="icon" />
-					</a>
-					<a href="/">
-						<Icon name="minus" class="icon" />
-					</a>
-					<a href="/">
-						<Icon name="plus" class="icon" />
-					</a>
-					<a href="/">
-						<Icon name="reply" class="icon" />
-					</a>
+					<Icon name="threeDots" />
+					<Icon name="minus" />
+					<Icon name="plus" />
+					<Icon name="reply" />
 				</div>
 			</div>
 		</div>

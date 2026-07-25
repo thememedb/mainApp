@@ -7,7 +7,7 @@ let comment1 = {
 		avatar: '/userAvatars/1.jpg',
 		icon: 'coins'
 	},
-	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
+	comment: 'This is the most cursed thing I have ever ever seen 😂',
 	time: new Date(Date.now() - 30 * 1000).toString(),
 	rank: 26,
 	vote: null
@@ -87,12 +87,12 @@ let comment7 = {
 let comment8 = {
 	user: {
 		id: 321321,
-		name: 'Frigid Sexbot Android 18',
+		name: 'Frigid Sexbot Androido',
 		avatar: '/userAvatars/2.jpg',
 		icon: 'bot'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
-	time: "2026-01-11T23:00:00.000Z",
+	time: '2026-01-11T23:00:00.000Z',
 	rank: 126,
 	vote: null
 };
@@ -111,9 +111,69 @@ export async function load({ params }) {
 			time: new Date(2026, 6, 3, 1, 30).toString(),
 			score: 692
 		},
-		reactions: {},
-		tags: [],
-		comments: comments
+		reactions: [
+			{ id: 2, score: '19', emoji: '😁' },
+			{ id: 1, score: '20', emoji: '😂' },
+			{ id: 3, score: '18', emoji: '🐢' },
+			{ id: 4, score: '17', emoji: '🗿' },
+			{ id: 5, score: '16', emoji: '🦫' },
+			{ id: 6, score: '15', emoji: '🕋' },
+			{ id: 7, score: '14', emoji: '☪️' },
+			{ id: 8, score: '13', emoji: '🤯' },
+			{ id: 9, score: '12', emoji: '🙈' },
+			{ id: 10, score: '11', emoji: '🔥' },
+			{ id: 11, score: '10', emoji: '😢' },
+			{ id: 12, score: '9', emoji: '🤔' },
+			{ id: 13, score: '8', emoji: '👍' },
+			{ id: 14, score: '7', emoji: '👀' },
+			{ id: 15, score: '6', emoji: '💀' },
+			{ id: 16, score: '5', emoji: '🥶' },
+			{ id: 17, score: '4', emoji: '😴' },
+			{ id: 18, score: '3', emoji: '🙌' },
+			{ id: 19, score: '2', emoji: '🤝' },
+			{ id: 20, score: '1', emoji: '🌟' }
+		],
+		tags: [
+			{
+				id: 31365464,
+				score: 12,
+				text: 'funny'
+			},
+			{
+				id: 31365464,
+				score: 11,
+				text: 'kvykt'
+			},
+			{
+				id: 31365464,
+				score: 10,
+				text: 'smiling'
+			},
+			{
+				id: 31365464,
+				score: 9,
+				text: 'happy'
+			},
+			{
+				id: 31365464,
+				score: 8,
+				text: 'lol'
+			},
+			{
+				id: 31365464,
+				score: 7,
+				text: 'katukas'
+			},
+			{
+				id: 31365464,
+				score: 6,
+				text: '☪️ancer'
+			}
+		],
+		comments: [
+			[comment1, comment2, comment3],
+			[comment4, comment5, comment6, comment7, comment8]
+		]
 	};
 	return post;
 }

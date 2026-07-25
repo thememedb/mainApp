@@ -1,16 +1,12 @@
 <script>
-	import { Tag } from '$lib';
+	import { Tag, Icon } from '$lib';
 	let { tags } = $props();
 </script>
 
 <div class="tags container">
-	<Tag text="funny" />
-	<Tag text="kvykt" />
-	<Tag text="smiling" />
-	<Tag text="happy" />
-	<Tag text="lol" />
-	<Tag text="katukas" />
-	<Tag text="precious" />
+	{#each tags as tag}
+		<Tag {tag} />
+	{/each}
 </div>
 
 <style>
