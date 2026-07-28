@@ -4,4 +4,8 @@
 
 <span class="score">{score > 0 ? '+' : ''}{score} • </span>
 
-<style></style>
+<style>
+	.score {
+		font-size: var(--px16);
+	}
+</style>

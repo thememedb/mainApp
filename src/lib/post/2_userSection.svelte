@@ -35,7 +35,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			gap: var(--px12);
+			gap: var(--px14);
 			font-size: var(--px20);
 			img {
 				width: var(--px48);

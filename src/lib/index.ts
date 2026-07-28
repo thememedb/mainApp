@@ -7,7 +7,7 @@ export { default as UserSection } from './post/2_userSection.svelte';
 export { default as Comment } from './components/comment.svelte';
 export { default as Icon } from './components/icon.svelte';
 export { default as Score } from './components/score.svelte';
-export { default as StatusIcon } from './assets/icons/statusIcons/statusIcon.svelte';
+export { default as StatusIcon } from './components/statusIcon.svelte';
 export { default as Tag } from './components/tag.svelte';
 export { default as Time } from './components/time.svelte';
 export { default as Username } from './components/username.svelte';

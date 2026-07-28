@@ -17,16 +17,17 @@
 	.comments {
 		display: flex;
 		flex-direction: column;
-		gap: var(--px24);
+		gap: var(--px36);
 		padding-top: var(--px24);
 	}
 	.threadContainer {
+		--padding: var(--px16);
 		display: flex;
 		flex-direction: column;
-		gap: var(--px16);
-		padding: var(--px12) 0 var(--px8) var(--px12);
-		border-top-left-radius: calc(var(--px1) * 36);
-		border-bottom-left-radius: var(--px16);
+		gap: var(--px24);
+		padding: var(--padding) var(--px4) var(--px12) var(--padding);
+		border-top-left-radius: calc(var(--px1) * 42) calc(var(--px1) * 40);
+		border-bottom-left-radius: var(--px18);
 		border-left: calc(var(--px1) * 2) solid transparent;
 		border-bottom: calc(var(--px1) * 1.5) solid transparent;
 		background:

@@ -30,3 +30,12 @@
 </script>
 
 <span class={res.isDate ? 'date' : 'time'}>{res.text}</span>
+
+<style>
+	.time {
+		color: var(--gray70);
+	}
+	.date {
+		color: var(--gray60);
+	}
+</style>

@@ -15,7 +15,7 @@
 					<Time {time} />
 				</div>
 				<div class="reactionButtons">
-					<Icon name="threeDots" />
+					<Icon name="threeDotsNarrow" class="icon first" viewBox="0 0 7 24" />
 					<Icon name="minus" />
 					<Icon name="plus" />
 					<Icon name="reply" />
@@ -35,9 +35,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			gap: var(--px12);
+			gap: var(--px14);
 			font-size: var(--px20);
-			img {
+			> img {
 				width: var(--px48);
 				height: var(--px48);
 				border-radius: 100%;
@@ -47,40 +47,40 @@
 				height: var(--px48);
 				display: flex;
 				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-end;
-				gap: var(--px4);
 				.bottom {
+					height: var(--px24);
 					display: flex;
-					align-items: flex-end;
-					gap: var(--px8);
+					align-items: baseline;
+					gap: var(--px11);
 					.score-time {
 						color: var(--gray80);
 						font-weight: 400;
 						line-height: 1;
-						font-size: var(--px14);
-						:global(.time) {
-							color: var(--gray70);
+						font-size: var(--px15);
+					}
+					:global(&:has(.time)) {
+						transform: translateY(var(---px2));
+						.reactionButtons {
+							transform: translateY(var(--px8));
 						}
-						:global(&:has(> .date)) {
-							font-size: calc(var(--px1) * 15);
-							line-height: 0.75;
-						}
-						:global(.date) {
-							font-size: var(--px14);
-							color: var(--gray60);
+					}
+					:global(&:has(.date)) {
+						transform: translateY(var(---px1));
+						gap: var(--px12);
+						.reactionButtons {
+							transform: translateY(calc(var(--px1) * 6.75));
 						}
 					}
 					.reactionButtons {
-						margin-bottom: calc(var(--px1) * -6);
 						display: flex;
-						align-items: end;
-						justify-content: flex-start;
-						gap: var(--px8);
+						gap: var(--px10);
 						:global(.icon) {
 							color: var(--gray50);
 							width: var(--px24);
 							height: var(--px24);
+							&.first {
+								margin: 0 var(---px6);
+							}
 						}
 					}
 				}
@@ -91,7 +91,7 @@
 			font-size: var(--px16);
 			font-weight: 400;
 			color: var(--gray90);
-			line-height: 1.25;
+			line-height: var(--px22);
 		}
 	}
 </style>

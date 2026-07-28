@@ -1,5 +1,5 @@
 <script>
-	import { Tag, Icon } from '$lib';
+	import { Tag } from '$lib';
 	let { tags } = $props();
 </script>
 

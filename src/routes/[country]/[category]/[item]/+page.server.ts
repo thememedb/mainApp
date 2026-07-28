@@ -3,9 +3,9 @@ import { thumbs } from '$lib';
 let comment1 = {
 	user: {
 		id: 321321,
-		name: 'Beprisikopūstkiškeliau1',
+		name: 'Beprisikopūstkyštel',
 		avatar: '/userAvatars/1.jpg',
-		icon: 'coins'
+		icon: 'verified'
 	},
 	comment: 'This is the most cursed thing I have ever ever seen 😂',
 	time: new Date(Date.now() - 30 * 1000).toString(),
@@ -15,9 +15,9 @@ let comment1 = {
 let comment2 = {
 	user: {
 		id: 321321,
-		name: 'Your mom 2',
+		name: 'Beprisikopūstkiškeliaud',
 		avatar: '/userAvatars/2.jpg',
-		icon: 'starSolid'
+		icon: 'starLine'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
 	time: new Date(Date.now() - 120 * 1000).toString(),
@@ -31,7 +31,7 @@ let comment3 = {
 		avatar: '/userAvatars/3.jpg',
 		icon: 'verified'
 	},
-	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
+	comment: 'GLORIOUS ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
 	time: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(),
 	rank: 26,
 	vote: null
@@ -43,7 +43,8 @@ let comment4 = {
 		avatar: '/userAvatars/4.jpg',
 		icon: 'verified'
 	},
-	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
+	comment:
+		"Lorem Ipsum is simply dummy text of the printing and typedsfgsetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
 	time: new Date(Date.now() - 30 * 60 * 60 * 1000).toISOString(),
 	rank: 26,
 	vote: null
@@ -63,7 +64,7 @@ let comment5 = {
 let comment6 = {
 	user: {
 		id: 321321,
-		name: 'Šyška 6',
+		name: 'Android 17',
 		avatar: '/userAvatars/6.png',
 		icon: 'coins'
 	},
@@ -92,7 +93,7 @@ let comment8 = {
 		icon: 'bot'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
-	time: '2026-01-11T23:00:00.000Z',
+	time: '2025-01-11T23:00:00.000Z',
 	rank: 126,
 	vote: null
 };
