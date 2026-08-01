@@ -35,7 +35,7 @@
 		margin: 0 auto;
 		min-width: 240px;
 		max-width: 644px;
-		background-color: black; 
+		background-color: var(--black); 
 		min-height: 100dvh;
 		header {
 			position: sticky;

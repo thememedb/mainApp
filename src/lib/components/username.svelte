@@ -3,7 +3,7 @@
 	let { name, icon } = $props();
 </script>
 
-<a href="/">
+<a href={`/users/${name}`}>
 	<div class="username">
 		<span class="text">{name}</span>
 		<StatusIcon {icon} />
@@ -13,7 +13,6 @@
 <style>
 	.username {
 		height: var(--px24);
-		gap: var(--px5);
 		font-size: var(--px20);
 		line-height: var(--px20);
 		display: flex;

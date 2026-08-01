@@ -29,7 +29,7 @@ let comment3 = {
 		id: 321321,
 		name: 'Bil 3 hours',
 		avatar: '/userAvatars/3.jpg',
-		icon: 'verified'
+		icon: 'starSolid'
 	},
 	comment: 'GLORIOUS ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
 	time: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(),
@@ -41,7 +41,7 @@ let comment4 = {
 		id: 321321,
 		name: 'Into 4',
 		avatar: '/userAvatars/4.jpg',
-		icon: 'verified'
+		icon: 'donator'
 	},
 	comment:
 		"Lorem Ipsum is simply dummy text of the printing and typedsfgsetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
@@ -90,7 +90,7 @@ let comment8 = {
 		id: 321321,
 		name: 'Frigid Sexbot Androido',
 		avatar: '/userAvatars/2.jpg',
-		icon: 'bot'
+		icon: 'donator'
 	},
 	comment: 'Rorem ipsum, dolor sit amet. Gaudeamus igitur, nortradamus to chaltur.',
 	time: '2025-01-11T23:00:00.000Z',
@@ -106,7 +106,7 @@ export async function load({ params }) {
 	const post = {
 		media: thumbs.items.find((item) => item.id === Number(params.item)),
 		user: {
-			name: 'Beprisikopūstkiškeliaud',
+			name: 'Beprisikopūstkiškelia',
 			avatar: '/userAvatars/3.jpg',
 			id: 'asdf6a8sd47f36as5d7f357',
 			time: new Date(2026, 6, 3, 1, 30).toString(),

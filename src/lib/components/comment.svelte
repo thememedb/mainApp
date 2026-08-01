@@ -6,7 +6,9 @@
 
 <div class="comment">
 	<div class="user">
-		<img src={user.avatar} alt="user avatar" />
+		<a href={`/users/${user.name}`}>
+			<img class="avatar" src={user.avatar} alt="user avatar" />
+		</a>
 		<div class="user-info">
 			<Username name={user.name} icon={user.icon} />
 			<div class="bottom">
@@ -15,7 +17,7 @@
 					<Time {time} />
 				</div>
 				<div class="reactionButtons">
-					<Icon name="threeDotsNarrow" class="icon first" viewBox="0 0 7 24" />
+					<Icon name="threeDots" class="icon first" />
 					<Icon name="minus" />
 					<Icon name="plus" />
 					<Icon name="reply" />
@@ -37,7 +39,7 @@
 			justify-content: flex-start;
 			gap: var(--px14);
 			font-size: var(--px20);
-			> img {
+			.avatar {
 				width: var(--px48);
 				height: var(--px48);
 				border-radius: 100%;
@@ -51,7 +53,7 @@
 					height: var(--px24);
 					display: flex;
 					align-items: baseline;
-					gap: var(--px11);
+					gap: var(--px6);
 					.score-time {
 						color: var(--gray80);
 						font-weight: 400;
@@ -73,13 +75,14 @@
 					}
 					.reactionButtons {
 						display: flex;
-						gap: var(--px10);
+						/* gap: var(--px10); */
 						:global(.icon) {
 							color: var(--gray50);
-							width: var(--px24);
+							width: calc(var(--px24) + 2 * var(--px5));
 							height: var(--px24);
+							padding: 0 var(--px5);
 							&.first {
-								margin: 0 var(---px6);
+								
 							}
 						}
 					}

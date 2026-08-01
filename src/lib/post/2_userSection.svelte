@@ -7,7 +7,9 @@
 
 <div class="postUser container">
 	<div class="user">
-		<img src={avatar} alt="Users Avatar" />
+		<a href={`/users/${name}`}>
+			<img src={avatar} alt="Users Avatar" />
+		</a>
 		<div class="user-info">
 			<Username {name} icon="verified" />
 			<div class="score-time">

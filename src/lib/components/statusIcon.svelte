@@ -6,7 +6,9 @@
 
 <style>
 	img {
-		width: var(--px24);
+		--padding: var(--px5);
+		padding-left: var(--padding);
+		width: calc(var(--px24) + var(--padding));
 		height: var(--px24);
 	}
 </style>

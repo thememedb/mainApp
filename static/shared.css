@@ -1,5 +1,6 @@
 /* variables*/
 html {
+	color-scheme: light dark;
 	--px1: calc(100cqw / 376);
 	--px2: calc(2 * var(--px1));
 	--px3: calc(3 * var(--px1));
@@ -50,6 +51,7 @@ html {
 	--blue: #2456b3;
 	--violet: #9733c2;
 
+	/* --black: light-dark(white, black); */
 	--black: #000000;
 	--gray01: #030303;
 	--gray05: #0d0d0d;
@@ -64,6 +66,7 @@ html {
 	--gray80: #d1d1c7;
 	--gray90: #e5e5dc;
 	--white: #ffffff;
+	/* --white: light-dark(black, white); */
 
 	--bg-0: var(--black);
 	--bg-1: var(--gray05);
@@ -83,7 +86,7 @@ html {
 html::-webkit-scrollbar {
 	display: none; /* Chrome, Safari */
 }
-html.dark {
+/* html.dark {
 	--bg-1: #2e2e2e;
 	--bg-2: #4d4d4d;
 	--bg-3: #666;
@@ -93,7 +96,7 @@ html.dark {
 	--link: #73c1fc;
 	--link-hover: #91cefd;
 	--link-active: #4baffb;
-}
+} */
 
 *,
 *::before,
@@ -104,7 +107,7 @@ html.dark {
 	margin: 0;
 }
 body {
-	color: white;
+	color: var(--white);
 	background: var(--black);
 	font-style: normal;
 	font-variant: normal;
@@ -134,6 +137,16 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+button {
+	appearance: none;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
 }
 span,
 div,
