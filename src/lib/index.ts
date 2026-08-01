@@ -1,1 +1,14 @@
-// place files you want to import through the `$lib` alias in this folder.
+export { default as CommentSection } from './post/5_commentSection.svelte';
+export { default as FooterSection } from './post/6_footerSection.svelte';
+export { default as MediaSection } from './post/1_mediaSection.svelte';
+export { default as ReactionSection } from './post/3_reactionSection.svelte';
+export { default as TagSection } from './post/4_tagSection.svelte';
+export { default as UserSection } from './post/2_userSection.svelte';
+export { default as Comment } from './components/comment.svelte';
+export { default as Icon } from './components/icon.svelte';
+export { default as Score } from './components/score.svelte';
+export { default as StatusIcon } from './components/statusIcon.svelte';
+export { default as Tag } from './components/tag.svelte';
+export { default as Time } from './components/time.svelte';
+export { default as Username } from './components/username.svelte';
+export { default as thumbs } from './thumbs.json';

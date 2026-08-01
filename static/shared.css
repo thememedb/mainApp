@@ -1,5 +1,49 @@
 /* variables*/
 html {
+	color-scheme: light dark;
+	--px1: calc(100cqw / 376);
+	--px2: calc(2 * var(--px1));
+	--px3: calc(3 * var(--px1));
+	--px4: calc(4 * var(--px1));
+	--px5: calc(5 * var(--px1));
+	--px6: calc(6 * var(--px1));
+	--px7: calc(7 * var(--px1));
+	--px8: calc(8 * var(--px1));
+	--px9: calc(9 * var(--px1));
+	--px10: calc(10 * var(--px1));
+	--px11: calc(11 * var(--px1));
+	--px12: calc(12 * var(--px1));
+	--px13: calc(13 * var(--px1));
+	--px14: calc(14 * var(--px1));
+	--px15: calc(15 * var(--px1));
+	--px16: calc(16 * var(--px1));
+	--px17: calc(17 * var(--px1));
+	--px18: calc(18 * var(--px1));
+	--px19: calc(19 * var(--px1));
+	--px20: calc(20 * var(--px1));
+	--px21: calc(21 * var(--px1));
+	--px22: calc(22 * var(--px1));
+	--px23: calc(23 * var(--px1));
+	--px24: calc(24 * var(--px1));
+	--px28: calc(28 * var(--px1));
+	--px32: calc(32 * var(--px1));
+	--px36: calc(36 * var(--px1));
+	--px42: calc(42 * var(--px1));
+	--px48: calc(48 * var(--px1));
+	--px52: calc(52 * var(--px1));
+	--px56: calc(56 * var(--px1));
+	--px64: calc(64 * var(--px1));
+	---px1: calc(-1 * var(--px1));
+	---px2: calc(-2 * var(--px1));
+	---px3: calc(-3 * var(--px1));
+	---px4: calc(-4 * var(--px1));
+	---px5: calc(-5 * var(--px1));
+	---px6: calc(-6 * var(--px1));
+	---px7: calc(-7 * var(--px1));
+	---px8: calc(-8 * var(--px1));
+	---px9: calc(-9 * var(--px1));
+	---px10: calc(-10 * var(--px1));
+	--leftpad: var(--px8);
 	--red: #e0251f;
 	--orange: #fc6605;
 	--yellow: #ffdc00;
@@ -7,17 +51,22 @@ html {
 	--blue: #2456b3;
 	--violet: #9733c2;
 
+	/* --black: light-dark(white, black); */
 	--black: #000000;
+	--gray01: #030303;
 	--gray05: #0d0d0d;
 	--gray10: #1a1a1a;
 	--gray15: #262626;
 	--gray20: #333333;
+	--gray30: #4d4d4c;
 	--gray40: #686865;
 	--gray50: #80807b;
 	--gray60: #9d9d95;
-	--gray80: #d4d4cb;
+	--gray70: #b6b6b0;
+	--gray80: #d1d1c7;
 	--gray90: #e5e5dc;
 	--white: #ffffff;
+	/* --white: light-dark(black, white); */
 
 	--bg-0: var(--black);
 	--bg-1: var(--gray05);
@@ -28,12 +77,16 @@ html {
 	--link: var(--gray50);
 	--link-hover: var(--gray80);
 	--link-active: var(--white);
-	--font: Rubik, apple-system;
-	--font-mono:
-		ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--font: Rubik, Noto Color Emoji, sans-serif;
 	--border-radius: 8px;
+
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE/old Edge */
 }
-html.dark {
+html::-webkit-scrollbar {
+	display: none; /* Chrome, Safari */
+}
+/* html.dark {
 	--bg-1: #2e2e2e;
 	--bg-2: #4d4d4d;
 	--bg-3: #666;
@@ -43,7 +96,7 @@ html.dark {
 	--link: #73c1fc;
 	--link-hover: #91cefd;
 	--link-active: #4baffb;
-}
+} */
 
 *,
 *::before,
@@ -53,21 +106,23 @@ html.dark {
 *:not(dialog) {
 	margin: 0;
 }
-@media (prefers-reduced-motion: no-preference) {
-	html {
-		interpolate-size: allow-keywords;
-		/* can be made more default?? */
-	}
-}
 body {
-	background: var(--bg-1);
+	color: var(--white);
+	background: var(--black);
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 700;
-	font-size: 1rem;
+	/* font-size: 1rem; */
 	font-family: var(--font);
-	line-height: 1.5;
+	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+	display: none;
 }
 img,
 picture,
@@ -83,6 +138,18 @@ textarea,
 select {
 	font: inherit;
 }
+button {
+	appearance: none;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+span,
+div,
 p,
 h1,
 h2,
@@ -93,7 +160,6 @@ h6 {
 	overflow-wrap: break-word;
 }
 p {
-	text-wrap: pretty;
 	hyphens: auto;
 }
 h1,
@@ -106,4 +172,14 @@ h6 {
 }
 :root {
 	isolation: isolate;
+}
+.container {
+	position: relative;
+	width: 100%;
+	height: max-content;
+	padding-left: var(--leftpad);
+}
+a {
+	text-decoration: none;
+	color: inherit;
 }

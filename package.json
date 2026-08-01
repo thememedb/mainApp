@@ -4,8 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"start": "vite dev --open",
-		"app": "vite dev --open /app",
+		"go": "vite dev --open --host",
 		"build": "vite build",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare --port 4173",
 		"prepare": "svelte-kit sync || echo ''",
@@ -31,6 +30,7 @@
 		"eslint-plugin-svelte": "^3.14.0",
 		"globals": "^17.3.0",
 		"prettier": "^3.8.1",
+		"prettier-plugin-sort-imports": "^1.8.11",
 		"prettier-plugin-svelte": "^3.4.1",
 		"svelte": "^5.51.0",
 		"svelte-check": "^4.3.6",
