@@ -7,7 +7,7 @@
 	"theme_color": "#000000",
 	"icons": [
 		{
-			"src": "/appicon3.png",
+			"src": "/appicon2.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
