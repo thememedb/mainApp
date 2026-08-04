@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Username from '$lib/components/Username.svelte';
+	import Username from '$lib/components/username.svelte';
 	let { data } = $props();
 	let { name, avatar, icon, aura, credits } = $derived(data);
 </script>
