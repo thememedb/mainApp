@@ -35,7 +35,7 @@
 		margin: 0 auto;
 		min-width: 240px;
 		max-width: 644px;
-		background-color: var(--black); 
+		background-color: var(--black);
 		min-height: 100dvh;
 		header {
 			position: sticky;
@@ -67,9 +67,9 @@
 			gap: var(--px16);
 			padding: var(--px16);
 			z-index: 1000;
-			
+
 			.logo {
-				--gradient: linear-gradient(
+				--gradient1: linear-gradient(
 					-150deg,
 					#ff00ff 0%,
 					#00d4ff 40%,
@@ -78,13 +78,68 @@
 					#ff7700 85%,
 					#ff33bb 100%
 				);
+				--gradient2: linear-gradient(
+					30deg,
+					color(display-p3 1 0 0.5) 10%,
+					color(display-p3 1 0.5 0) 18%,
+					color(display-p3 1 1 0) 30%,
+					color(display-p3 0 1 0) 45%,
+					color(display-p3 0 1 0.5) 52.5%,
+					color(display-p3 0 1 1) 60%,
+					color(display-p3 0 0.5 1) 65%,
+					color(display-p3 0 0.25 1) 70%,
+					color(display-p3 0 0 1) 74%,
+					color(display-p3 0.25 0 1) 79%,
+					color(display-p3 0.5 0 1) 82%,
+					color(display-p3 1 0 0.5) 87%
+				);
+				--gradient3: linear-gradient(
+					30deg,
+					color(display-p3 1 0 0.4) 10%,
+					color(display-p3 1 0.5 0) 18%,
+					color(display-p3 1 1 0) 30%,
+					color(display-p3 0 1 0) 45%,
+					color(display-p3 0 1 0.5) 52.5%,
+					color(display-p3 0 1 1) 60%,
+					color(display-p3 0 0.5 1) 70%,
+					color(display-p3 0 0 1) 80%,
+					color(display-p3 0 0 0.4) 89%
+				);
+				--gradient4: linear-gradient(
+					30deg,
+					color(display-p3 1 0 0.5) 7%,
+					color(display-p3 1 0.5 0) 18%,
+					color(display-p3 1 1 0) 30%,
+					color(display-p3 0 1 0) 40%,
+					/* color(display-p3 0 0.25 1) 48.5%, */ color(display-p3 0 1 0.75) 50%,
+					/* color(display-p3 0 0.25 1) 51.5%, */ color(display-p3 0 1 0) 60%,
+					color(display-p3 1 1 0) 70%,
+					color(display-p3 1 0.5 0) 80%,
+					color(display-p3 1 0 0.4) 89%
+				);
+				--gradient5: linear-gradient(
+					30deg,
+					color(display-p3 1 0 0.5) 10%,
+					color(display-p3 1 0.5 0) 18%,
+					color(display-p3 1 1 0) 30%,
+					color(display-p3 0 1 0) 45%,
+					color(display-p3 0 1 0.5) 52.5%,
+					color(display-p3 0 1 1) 60%,
+					/* color(display-p3 0 0.5 1) 70%, */ /* color(display-p3 0.5 0 1) 79%, */
+					color(display-p3 0 0.65 1) 65%,
+					color(display-p3 0 0.45 1) 68%,
+					/* color(display-p3 0.2 0.2 1) 73%, */ color(display-p3 0.25 0.25 1) 75%,
+					color(display-p3 0.35 0.25 1) 78%,
+					color(display-p3 1 0 1) 85%,
+					color(display-p3 1 0 0.5) 87%
+				);
 				margin: 0;
 				font-size: var(--px36);
 				font-weight: 700;
 				letter-spacing: -0.03em;
 				display: block;
 				white-space: nowrap;
-				background: var(--gradient);
+				background: var(--gradient3);
 				-webkit-background-clip: text;
 				background-clip: text;
 				color: transparent;
