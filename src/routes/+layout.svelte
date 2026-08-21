@@ -13,7 +13,7 @@
 
 <style>
 	main {
-		container-type: inline-size;
+		container-type: inline-size; /* reference for container queries */
 		width: 100%;
 		margin: 0 auto;
 		min-width: 240px;

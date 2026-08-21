@@ -63,11 +63,11 @@
 					:global(&:has(.time)) {
 						transform: translateY(var(---px2));
 						.reactionButtons {
-							transform: translateY(var(--px8));
+							transform: translateY(var(--px7));
 						}
 					}
 					:global(&:has(.date)) {
-						transform: translateY(var(---px1));
+						transform: translateY(var(---px2));
 						gap: var(--px12);
 						.reactionButtons {
 							transform: translateY(calc(var(--px1) * 6.75));
@@ -75,14 +75,14 @@
 					}
 					.reactionButtons {
 						display: flex;
-						/* gap: var(--px10); */
 						:global(.icon) {
 							color: var(--gray50);
 							width: calc(var(--px24) + 2 * var(--px5));
 							height: var(--px24);
 							padding: 0 var(--px5);
 							&.first {
-								
+								width: var(--px24);
+								padding: 0;
 							}
 						}
 					}
@@ -90,9 +90,11 @@
 			}
 		}
 		.commentText {
+			white-space: pre-line;
 			margin-left: calc(var(--px1) * -1);
-			font-size: var(--px16);
-			font-weight: 400;
+			font-size: calc(var(--px1) * 16);
+			font-weight: 325;
+			word-spacing: calc(var(--px1) * 2);
 			color: var(--gray90);
 			line-height: var(--px22);
 		}
