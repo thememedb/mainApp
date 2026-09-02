@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Icon from '$lib/components/icon.svelte';
-	import Header from '$lib/components/headerDefault.svelte';
+	import Header from '$lib/components/headerDetails.svelte';
 	let { children } = $props();
 </script>
 

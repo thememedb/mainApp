@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Icon from '$lib/components/icon.svelte';
+	import { page } from '$app/state';
 </script>
 
 <header>
-	<a href="/" data-sveltekit-reload>
-		<h2 class="logo">memedb</h2>
+	<a href={`/users/1}`}>
+		<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
 	</a>
 	<div class="nav">
 		<a href="/uppload">
@@ -20,6 +21,9 @@
 			<Icon name="menuBurger" class="icon" />
 		</a>
 	</div>
+	<a href="/lithuania/top" data-sveltekit-reload>
+		<img class="logo-image" src="/favicon.png" alt="Logo" />
+	</a>
 </header>
 
 <style>
@@ -40,9 +44,18 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: var(--px16);
-		padding: var(--px16);
+		padding: var(--px8);
 		z-index: 1000;
-
+		.logo-image {
+			/* transform: scaleX(-1); */
+			width: var(--px48);
+			height: var(--px48);
+		}
+		.user-avatar {
+			width: var(--px42);
+			height: var(--px42);
+			border-radius: 100%;
+		}
 		.logo {
 			/* pratrinti gradientus ir palikti tik vieną spalvą */
 			--gradient1: linear-gradient(

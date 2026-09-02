@@ -1,7 +1,5 @@
-import { thumbs } from '$lib';
+import { redirect } from '@sveltejs/kit';
 
-export async function load() {
-	return {
-		items: thumbs.items
-	};
+export function load() {
+	redirect(302, '/lithuania/top');
 }
