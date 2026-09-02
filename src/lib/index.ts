@@ -11,4 +11,5 @@ export { default as StatusIcon } from './components/statusIcon.svelte';
 export { default as Tag } from './components/tag.svelte';
 export { default as Time } from './components/time.svelte';
 export { default as Username } from './components/username.svelte';
+export { default as Header } from './components/header.svelte';
 export { default as thumbs } from './thumbs.json';

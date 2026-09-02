@@ -1,12 +1,19 @@
 <script lang="ts">
 	import Icon from '$lib/components/icon.svelte';
 	import { page } from '$app/state';
+	let isDetails = page.route.id === '/[country]/[category]/[item]';
 </script>
 
 <header>
-	<a href={`/users/1}`}>
-		<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
-	</a>
+	{#if isDetails}
+		<a href={`/lithuania/top#${page.data.media.id}`} data-sveltekit-reload>
+			<Icon name="arrowLeftFat" class="icon" />
+		</a>
+	{:else}
+		<a href={`/users/1}`}>
+			<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
+		</a>
+	{/if}
 	<div class="nav">
 		<a href="/uppload">
 			<Icon name="cloudArrowUp" class="icon" />
@@ -21,9 +28,15 @@
 			<Icon name="menuBurger" class="icon" />
 		</a>
 	</div>
-	<a href="/lithuania/top" data-sveltekit-reload>
-		<img class="logo-image" src="/favicon.png" alt="Logo" />
-	</a>
+	{#if isDetails}
+		<a href="/share">
+			<Icon name="share" class="icon" style="color: var(--gray90)" />
+		</a>
+	{:else}
+		<a href="/lithuania/top" data-sveltekit-reload>
+			<img class="logo-image" src="/favicon.png" alt="Logo" />
+		</a>
+	{/if}
 </header>
 
 <style>
@@ -47,17 +60,31 @@
 		padding: var(--px8);
 		z-index: 1000;
 		.logo-image {
-			/* transform: scaleX(-1); */
 			width: var(--px48);
 			height: var(--px48);
 		}
 		.user-avatar {
+			margin: var(--px3);
 			width: var(--px42);
 			height: var(--px42);
 			border-radius: 100%;
 		}
-		.logo {
-			/* pratrinti gradientus ir palikti tik vieną spalvą */
+		:global(.icon) {
+			color: var(--gray80);
+			width: var(--px32);
+			height: var(--px32);
+		}
+		.nav {
+			display: flex;
+			align-items: center;
+			gap: var(--px16);
+			:global(.icon) {
+				color: var(--gray80);
+				width: var(--px24);
+				height: var(--px24);
+			}
+		}
+		/* .logo {
 			--gradient1: linear-gradient(
 				-150deg,
 				#ff00ff 0%,
@@ -103,16 +130,6 @@
 			-webkit-background-clip: text;
 			background-clip: text;
 			color: transparent;
-		}
-		.nav {
-			display: flex;
-			align-items: center;
-			gap: var(--px16);
-			:global(.icon) {
-				color: var(--gray90);
-				width: var(--px24);
-				height: var(--px24);
-			}
-		}
+		} */
 	}
 </style>
