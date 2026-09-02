@@ -63,10 +63,10 @@
 	</div>
 
 	<main class="content">
-		<h1 class="logo">memedb</h1>
+		<img class="logo" src="/favicon.png" alt="memedb logo" />
 		<div class="tagline">The legend is born</div>
 		<div class="coming-soon">stay tuned</div>
-		<div class="launch-date">Spring 2026</div>
+		<div class="launch-date">2027</div>
 	</main>
 </div>
 
@@ -162,6 +162,8 @@
 	}
 
 	.logo {
+		width: clamp(80px, 80vw, 512px);
+		height: auto;
 		font-size: clamp(4.8rem, 14vw, 11rem);
 		font-weight: 700;
 		letter-spacing: -0.03em;
@@ -194,12 +196,13 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: #aeadad;
+		color: transparent;
 	}
 
 	.tagline {
 		font-size: clamp(1.2rem, 3.8vw, 1.55rem);
 		font-weight: 500;
-		color: gray;
+		color: lightgray;
 		max-width: 38ch;
 		line-height: 1.48;
 		opacity: 0.92;
@@ -211,7 +214,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		font-size: 1.25rem;
-		color: gray;
+		color: lightgray;
 		letter-spacing: 0.05em;
 		margin-top: 0;
 		z-index: 2;
