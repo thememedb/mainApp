@@ -9,6 +9,7 @@
 		<a href={`/lithuania/top#${page.data.media.id}`} data-sveltekit-reload>
 			<Icon name="arrowLeftFat" class="icon" />
 		</a>
+		
 	{:else}
 		<a href={`/users/1}`}>
 			<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
