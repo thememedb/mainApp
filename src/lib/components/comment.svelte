@@ -68,7 +68,7 @@
 					}
 					:global(&:has(.date)) {
 						transform: translateY(var(---px2));
-						gap: var(--px12);
+						/* gap: var(--px12); */
 						.reactionButtons {
 							transform: translateY(calc(var(--px1) * 6.75));
 						}
@@ -76,13 +76,15 @@
 					.reactionButtons {
 						display: flex;
 						:global(.icon) {
+							--padding: var(--px5);
 							color: var(--gray50);
-							width: calc(var(--px24) + 2 * var(--px5));
+							width: calc(var(--px24) + 2 * var(--padding));
 							height: var(--px24);
-							padding: 0 var(--px5);
+							padding: 0 var(--padding);
 							&.first {
-								width: var(--px24);
-								padding: 0;
+								--padding: var(--px2);
+								width: calc(var(--px24) + 2 * var(--padding));
+								padding: 0 var(--padding);
 							}
 						}
 					}
