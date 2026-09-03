@@ -1,15 +1,14 @@
 <script lang="ts">
 	import Icon from '$lib/components/icon.svelte';
 	import { page } from '$app/state';
-	let isDetails = page.route.id === '/[country]/[category]/[item]';
+	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
 </script>
 
-<header>
+<header style="background: {isDetails ? 'var(--gradient)' : 'transparent'}">
 	{#if isDetails}
-		<a href={`/lithuania/top#${page.data.media.id}`} data-sveltekit-reload>
+		<a href={`/lithuania/top#${page.data.media.id}`}>
 			<Icon name="arrowLeftFat" class="icon" />
 		</a>
-		
 	{:else}
 		<a href={`/users/1}`}>
 			<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
@@ -31,7 +30,7 @@
 	</div>
 	{#if isDetails}
 		<a href="/share">
-			<Icon name="share" class="icon" style="color: var(--gray90)" />
+			<Icon name="share" class="icon" />
 		</a>
 	{:else}
 		<a href="/lithuania/top" data-sveltekit-reload>
@@ -42,11 +41,7 @@
 
 <style>
 	header {
-		position: sticky;
-		top: 0;
-		width: 100%;
-		height: var(--px64);
-		background: linear-gradient(
+		--gradient: linear-gradient(
 			to bottom,
 			rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 0.98) 50%,
@@ -54,6 +49,10 @@
 			rgba(0, 0, 0, 0.85) 90%,
 			rgba(0, 0, 0, 0.8) 100%
 		);
+		position: sticky;
+		top: 0;
+		width: 100%;
+		height: var(--px64);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
