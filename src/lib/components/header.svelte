@@ -6,6 +6,7 @@
 	$effect(() => {
 		alert(route);
 	});
+	
 </script>
 
 <header style="background: {isDetails ? 'var(--gradient)' : 'transparent'}">
