@@ -2,10 +2,10 @@
 	import Icon from '$lib/components/icon.svelte';
 	import { page } from '$app/state';
 	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
-	let route = $derived(page.route.id);
-	$effect(() => {
-		alert(route);
-	});
+	// let route = $derived(page.route.id);
+	// $effect(() => {
+	// 	alert(route);
+	// });
 </script>
 
 <header style="background: {isDetails ? 'var(--gradient)' : 'transparent'}">
@@ -20,6 +20,7 @@
 			</div>
 		</a>
 	{/if}
+	derived
 	<div class="nav">
 		<a href="/uppload">
 			<Icon name="cloudArrowUp" class="icon" />
