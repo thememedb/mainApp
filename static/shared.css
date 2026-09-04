@@ -1,6 +1,7 @@
 /* variables*/
 html {
 	color-scheme: light dark;
+	--px0: 0px;
 	--px1: calc(100cqw / 376);
 	--px2: calc(2 * var(--px1));
 	--px3: calc(3 * var(--px1));

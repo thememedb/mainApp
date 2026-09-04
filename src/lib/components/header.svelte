@@ -2,16 +2,22 @@
 	import Icon from '$lib/components/icon.svelte';
 	import { page } from '$app/state';
 	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
+	let route = $derived(page.route.id);
+	$effect(() => {
+		alert(route);
+	});
 </script>
 
 <header style="background: {isDetails ? 'var(--gradient)' : 'transparent'}">
 	{#if isDetails}
 		<a href={`/lithuania/top#${page.data.media.id}`}>
-			<Icon name="arrowLeftFat" class="icon" />
+			<Icon name="arrowLeftFat" class="icon back" />
 		</a>
 	{:else}
 		<a href={`/users/1}`}>
-			<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
+			<div class="user-avatar-container">
+				<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
+			</div>
 		</a>
 	{/if}
 	<div class="nav">
@@ -30,7 +36,7 @@
 	</div>
 	{#if isDetails}
 		<a href="/share">
-			<Icon name="share" class="icon" />
+			<Icon name="share" class="icon share" />
 		</a>
 	{:else}
 		<a href="/lithuania/top" data-sveltekit-reload>
@@ -56,80 +62,44 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: var(--px16);
-		padding: var(--px8);
+		/* gap: var(--px16); */
+		/* padding: var(--px8); */
 		z-index: 1000;
 		.logo-image {
-			width: var(--px48);
-			height: var(--px48);
+			padding: var(--px0) var(--px6) var(--px6) var(--px0);
+			width: var(--px64);
+			height: var(--px64);
+		}
+		.user-avatar-container {
+			padding: var(--px11) var(--px11) var(--px11) var(--px11);
+			width: var(--px64);
+			height: var(--px64);
+			overflow: hidden;
+			/* border-radius: 1000px; */
 		}
 		.user-avatar {
-			margin: var(--px3);
+			/* padding: var(--px18) var(--px18) var(--px6) var(--px6); */
 			width: var(--px42);
 			height: var(--px42);
-			border-radius: 100%;
+			overflow: hidden;
+			border-radius: 1000px;
 		}
-		:global(.icon) {
+		:global(.icon.share, .icon.back) {
+			padding: var(--px16);
 			color: var(--gray80);
-			width: var(--px32);
-			height: var(--px32);
+			width: var(--px64);
+			height: var(--px64);
 		}
 		.nav {
 			display: flex;
 			align-items: center;
-			gap: var(--px16);
+			width: calc(var(--px1) * 176);
 			:global(.icon) {
+				padding: var(--px20) var(--px10);
 				color: var(--gray80);
-				width: var(--px24);
-				height: var(--px24);
+				width: var(--px64);
+				height: var(--px64);
 			}
 		}
-		/* .logo {
-			--gradient1: linear-gradient(
-				-150deg,
-				#ff00ff 0%,
-				#00d4ff 40%,
-				#00ff99 50%,
-				#ffff00 70%,
-				#ff7700 85%,
-				#ff33bb 100%
-			);
-			--gradient2: linear-gradient(
-				45deg,
-				color(display-p3 0.8 0 0.3) 7%,
-				color(display-p3 1 0.5 0) 18%,
-				color(display-p3 1 1 0) 30%,
-				color(display-p3 0.2 1 0.2) 45%,
-				color(display-p3 0 1 0.5) 52.5%,
-				color(display-p3 0 1 1) 60%,
-				color(display-p3 0 0.5 1) 70%,
-				color(display-p3 0 0 1) 80%,
-				color(display-p3 0 0 0.4) 92%
-			);
-			--gradient3: linear-gradient(
-				45deg,
-				color(display-p3 0.4 0 0.2) 5%,
-				color(display-p3 0.6 0 0.3) 10%,
-				color(display-p3 0.7 0.15 0.15) 15%,
-				color(display-p3 0.9 0.5 0) 25%,
-				color(display-p3 1 1 0) 35%,
-				color(display-p3 0.2 1 0.2) 50%,
-				color(display-p3 0 1 0.5) 57%,
-				color(display-p3 0 1 1) 66%,
-				color(display-p3 0 0.65 1) 72%,
-				color(display-p3 0 0.3 1) 80%,
-				color(display-p3 0.2 0 0.45) 91%
-			);
-			margin: 0;
-			font-size: var(--px36);
-			font-weight: 700;
-			letter-spacing: -0.03em;
-			display: block;
-			white-space: nowrap;
-			background: var(--gradient2);
-			-webkit-background-clip: text;
-			background-clip: text;
-			color: transparent;
-		} */
 	}
 </style>
