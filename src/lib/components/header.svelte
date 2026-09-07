@@ -4,7 +4,8 @@
 	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
 </script>
 
-<header style="background: {isDetails ? 'var(--gradient)' : 'transparent'}">
+<div class="header-background"></div>
+<header>
 	{#if isDetails}
 		<a href={`/lithuania/top#${page.data.media.id}`}>
 			<Icon name="arrowLeftFat" class="icon back" />
@@ -42,49 +43,52 @@
 </header>
 
 <style>
+	.header-background {
+		width: 100%;
+		height: var(--px64);
+	}
 	header {
-		--gradient: linear-gradient(
-			to bottom,
-			rgba(0, 0, 0, 1) 0%,
-			rgba(0, 0, 0, 0.98) 50%,
-			rgba(0, 0, 0, 0.9) 80%,
-			rgba(0, 0, 0, 0.85) 90%,
-			rgba(0, 0, 0, 0.8) 100%
-		);
-		position: sticky;
+		--gradient:
+			linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 0.98) 50%,
+				rgba(0, 0, 0, 0.9) 80%,
+				rgba(0, 0, 0, 0.85) 90%,
+				rgba(0, 0, 0, 0.8) 100%
+			),
+			linear-gradient(to right, rgba(0, 0, 0, 1) 0px, rgba(0, 0, 0, 0) var(--px64)),
+			linear-gradient(to left, rgba(0, 0, 0, 1) 0px, rgba(0, 0, 0, 0) var(--px64));
+		background: var(--gradient);
+		position: fixed;
 		top: 0;
 		width: 100%;
+		min-width: var(--minWidth);
+		max-width: var(--maxWidth);
 		height: var(--px64);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		/* gap: var(--px16); */
-		/* padding: var(--px8); */
 		z-index: 1000;
-		.logo-image {
-			padding: var(--px0) var(--px6) var(--px6) var(--px0);
-			width: var(--px64);
-			height: var(--px64);
-		}
 		.user-avatar-container {
-			padding: var(--px11) var(--px11) var(--px11) var(--px11);
 			width: var(--px64);
 			height: var(--px64);
-			overflow: hidden;
-			/* border-radius: 1000px; */
+			padding: var(--px12) var(--px18) var(--px12) var(--px6);
+			@media (pointer: fine) {
+				padding: var(--px12) var(--px16) var(--px12) var(--mobilePadding);
+			}
 		}
 		.user-avatar {
-			/* padding: var(--px18) var(--px18) var(--px6) var(--px6); */
-			width: var(--px42);
-			height: var(--px42);
-			overflow: hidden;
-			border-radius: 1000px;
+			width: var(--px40);
+			height: var(--px40);
+			border-radius: 100%;
 		}
-		:global(.icon.share, .icon.back) {
-			padding: var(--px16);
+		:global(.icon.back) {
 			color: var(--gray80);
 			width: var(--px64);
 			height: var(--px64);
+			padding: var(--px14) calc(var(--px28) - var(--mobilePadding)) var(--px14)
+				calc(var(--mobilePadding));
 		}
 		.nav {
 			display: flex;
@@ -96,6 +100,25 @@
 				width: var(--px64);
 				height: var(--px64);
 			}
+		}
+		.logo-image {
+			object-fit: cover;
+			width: var(--px64);
+			height: var(--px64);
+			padding: var(--px6) var(--mobilePadding) var(--px8) var(--px2);
+			@media (pointer: coarse) {
+				padding-left: var(--px5);
+				padding-right: var(--px5);
+			}
+		}
+		:global(.icon.share) {
+			color: var(--gray80);
+			width: var(--px64);
+			height: var(--px64);
+			padding-top: var(--px13);
+			padding-right: var(--mobilePadding);
+			padding-bottom: var(--px15);
+			padding-left: calc(var(--px28) - var(--mobilePadding));
 		}
 	}
 </style>

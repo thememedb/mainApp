@@ -29,6 +29,7 @@ html {
 	--px28: calc(28 * var(--px1));
 	--px32: calc(32 * var(--px1));
 	--px36: calc(36 * var(--px1));
+	--px40: calc(40 * var(--px1));
 	--px42: calc(42 * var(--px1));
 	--px48: calc(48 * var(--px1));
 	--px52: calc(52 * var(--px1));
@@ -46,7 +47,11 @@ html {
 	---px8: calc(-8 * var(--px1));
 	---px9: calc(-9 * var(--px1));
 	---px10: calc(-10 * var(--px1));
-	--leftpad: var(--px8);
+
+	--mobilePadding: var(--px8);
+	--maxWidth: 644px;
+	--minWidth: 244px;
+
 	--red: #e0251f;
 	--orange: #fc6605;
 	--yellow: #ffdc00;
@@ -89,17 +94,6 @@ html {
 html::-webkit-scrollbar {
 	display: none; /* Chrome, Safari */
 }
-/* html.dark {
-	--bg-1: #2e2e2e;
-	--bg-2: #4d4d4d;
-	--bg-3: #666;
-	--fg-1: #e6e6e6;
-	--fg-2: #b3b3b3;
-	--fg-3: #999;
-	--link: #73c1fc;
-	--link-hover: #91cefd;
-	--link-active: #4baffb;
-} */
 
 *,
 *::before,
@@ -111,7 +105,13 @@ html::-webkit-scrollbar {
 }
 body {
 	color: var(--white);
-	background: var(--black);
+	background: linear-gradient(
+		to right,
+		var(--gray05) calc(50% - 960px),
+		var(--black) calc(50% - 322px),
+		var(--black) calc(50% + 322px),
+		var(--gray05) calc(50% + 960px)
+	);
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 700;
@@ -180,7 +180,7 @@ h6 {
 	position: relative;
 	width: 100%;
 	height: max-content;
-	padding-left: var(--leftpad);
+	padding-left: var(--mobilePadding);
 }
 a {
 	text-decoration: none;

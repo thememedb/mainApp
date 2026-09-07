@@ -19,8 +19,5 @@
 		max-width: 644px;
 		background-color: var(--black);
 		min-height: 100dvh;
-		.children {
-			z-index: 0;
-		}
 	}
 </style>
