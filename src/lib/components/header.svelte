@@ -2,6 +2,8 @@
 	import Icon from '$lib/components/icon.svelte';
 	import { page } from '$app/state';
 	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
+	let isProfile = $derived(page.route.id === '/users/[user]');
+	let isHome = $derived(page.route.id === '/[country]/[category]');
 </script>
 
 <div class="header-background"></div>
@@ -13,7 +15,10 @@
 	{:else}
 		<a href={`/users/1}`}>
 			<div class="user-avatar-container">
-				<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
+				<div class="picNmark">
+					<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
+					<div class="indicator" hidden = {!isProfile}></div>
+				</div>
 			</div>
 		</a>
 	{/if}
@@ -27,9 +32,9 @@
 		<a href="/filter">
 			<Icon name="funnel" class="icon" />
 		</a>
-		<a href="/menu">
+		<!-- <a href="/menu">
 			<Icon name="menuBurger" class="icon" />
-		</a>
+		</a> -->
 	</div>
 	{#if isDetails}
 		<a href="/share">
@@ -37,7 +42,12 @@
 		</a>
 	{:else}
 		<a href="/lithuania/top" data-sveltekit-reload>
-			<img class="logo-image" src="/favicon.png" alt="Logo" />
+			<div class="menu-logo">
+				<div class="logoNmark">
+					<img class="logo-image" src="/favicon.png" alt="Logo" />
+					<div class="indicator" hidden = {!isHome}></div>
+				</div>
+			</div>
 		</a>
 	{/if}
 </header>
@@ -74,6 +84,21 @@
 			width: var(--px64);
 			height: var(--px64);
 			padding: var(--px12) var(--px18) var(--px12) var(--px6);
+			.picNmark {
+				position: relative;
+				width: var(--px40);
+				height: var(--px40);
+				.indicator {
+					--size: var(--px8);
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: var(--size);
+					height: var(--size);
+					background: var(--gray80);
+					clip-path: polygon(100% 0, 100% 100%, 0 100%);
+				}
+			}
 			@media (pointer: fine) {
 				padding: var(--px12) var(--px16) var(--px12) var(--mobilePadding);
 			}
@@ -93,22 +118,45 @@
 		.nav {
 			display: flex;
 			align-items: center;
-			width: calc(var(--px1) * 176);
 			:global(.icon) {
-				padding: var(--px20) var(--px10);
+				padding: var(--px20) var(--px12);
 				color: var(--gray80);
-				width: var(--px64);
+				width: var(--px48);
 				height: var(--px64);
 			}
 		}
-		.logo-image {
-			object-fit: cover;
+		.menu-logo {
 			width: var(--px64);
 			height: var(--px64);
-			padding: var(--px6) var(--mobilePadding) var(--px8) var(--px2);
+			padding: var(--px9) var(--mobilePadding) var(--px9) var(--px2);
 			@media (pointer: coarse) {
 				padding-left: var(--px5);
 				padding-right: var(--px5);
+			}
+			.logoNmark {
+				position: relative;
+				width: calc(var(--px1) * 54);
+				height: calc(var(--px1) * 46);
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.indicator {
+					--size: var(--px6);
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: var(--size);
+					height: var(--size);
+					background: var(--gray80);
+					clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+				}
+				.logo-image {
+					--size: calc(var(--px1) * 54);
+					object-fit: cover;
+					width: var(--size);
+					height: var(--size);
+				}
 			}
 		}
 		:global(.icon.share) {
