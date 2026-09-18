@@ -8,8 +8,11 @@
 		<Icon name="plus" />
 		<Icon name="minus" />
 		<Icon name="heart" />
+		<Icon name="threeDots" />
+		<Icon name="details" />
 		<Icon name="tag" />
 		<Icon name="smiley" />
+		<Icon name="reply" />
 	</div>
 	<div class="emojis">
 		{#each reactions as reaction, i (reaction.id)}
@@ -20,60 +23,49 @@
 
 <style>
 	.reactions {
-		padding-top: var(--px16);
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		height: var(--px48);
+		padding-left: 0;
+		height: var(--px96);
 		.icons {
-			flex: 0 0 auto;
 			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-			gap: var(--px8);
 			:global(.icon) {
+				padding: var(--px10) var(--px5) var(--px6) var(--px5);
 				color: var(--gray80);
-				width: var(--px32);
-				height: var(--px32);
+				width: var(--px42);
+				height: var(--px48);
+				&:first-child {
+					padding-left: var(--mobilePadding);
+					width: var(--px46);
+				}
+				&:last-child {
+					width: var(--px48);
+					padding: var(--px11);
+					transform: scale(1.6) translate(var(--px8), var(---px12));
+				}
 			}
 		}
 		.emojis {
-			height: var(--px32);
-			padding-top: var(--px2);
-			padding-left: var(--px16);
+			height: var(--px48);
 			flex: 1 1 auto;
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			gap: var(--px6);
 			overflow-x: scroll;
-			overflow-y: hidden;
 			scrollbar-width: none;
 			-ms-overflow-style: none;
 			-webkit-overflow-scrolling: touch;
-			mask-image: linear-gradient(
-				to right,
-				transparent,
-				rgba(0, 0, 0, 0.04) var(--px4),
-				rgba(0, 0, 0, 0.16) var(--px8),
-				rgba(0, 0, 0, 0.25) var(--px10),
-				rgba(0, 0, 0, 0.36) var(--px12),
-				rgba(0, 0, 0, 0.49) var(--px14),
-				rgba(0, 0, 0, 0.64) var(--px16),
-				rgba(0, 0, 0, 0.81) var(--px18),
-				rgba(0, 0, 0, 1) var(--px22),
-				rgba(0, 0, 0, 1) 90%,
-				rgba(0, 0, 0, 0) 100%,
-				transparent
-			);
+			mask-image: var(--lineMask);
 			&::-webkit-scrollbar {
 				display: none;
 			}
 			.emoji {
+				padding: var(--px8) var(--px4);
 				height: 100%;
 				display: flex;
 				align-items: center;
-				font-size: calc(var(--px28) * var(--i));
+				font-size: calc(var(--px1) * 26 * var(--i));
+				&:first-child {
+					padding-left: var(--px8);
+				}
 			}
 		}
 	}

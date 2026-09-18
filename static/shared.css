@@ -1,6 +1,7 @@
 /* variables*/
 html {
 	color-scheme: light dark;
+	--width: 100cqw;
 	--px0: 0px;
 	--px1: calc(100cqw / 376);
 	--px2: calc(2 * var(--px1));
@@ -31,6 +32,7 @@ html {
 	--px36: calc(36 * var(--px1));
 	--px40: calc(40 * var(--px1));
 	--px42: calc(42 * var(--px1));
+	--px46: calc(46 * var(--px1));
 	--px48: calc(48 * var(--px1));
 	--px52: calc(52 * var(--px1));
 	--px56: calc(56 * var(--px1));
@@ -47,10 +49,12 @@ html {
 	---px8: calc(-8 * var(--px1));
 	---px9: calc(-9 * var(--px1));
 	---px10: calc(-10 * var(--px1));
+	---px12: calc(-12 * var(--px1));
 
 	--mobilePadding: var(--px8);
 	--maxWidth: 644px;
 	--minWidth: 244px;
+	--headerHeight: var(--px64);
 
 	--red: #e0251f;
 	--orange: #fc6605;
@@ -75,6 +79,22 @@ html {
 	--gray90: #e5e5dc;
 	--white: #ffffff;
 	/* --white: light-dark(black, white); */
+
+	--lineMask: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 0.04) var(--px2),
+		rgba(0, 0, 0, 0.16) var(--px4),
+		rgba(0, 0, 0, 0.25) var(--px5),
+		rgba(0, 0, 0, 0.36) var(--px6),
+		rgba(0, 0, 0, 0.49) var(--px7),
+		rgba(0, 0, 0, 0.64) var(--px8),
+		rgba(0, 0, 0, 0.81) var(--px9),
+		rgba(0, 0, 0, 1) var(--px11),
+		rgba(0, 0, 0, 1) 90%,
+		rgba(0, 0, 0, 0) 100%,
+		transparent
+	);
 
 	--bg-0: var(--black);
 	--bg-1: var(--gray05);

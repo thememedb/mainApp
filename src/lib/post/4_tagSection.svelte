@@ -11,17 +11,16 @@
 
 <style>
 	.tags {
-		position: relative;
+		padding-left: 0;
 		width: 100%;
-		height: max-content;
+		height: var(--px48);
 		overflow-x: scroll;
 		scrollbar-width: none;
 		-ms-overflow-style: none;
 		-webkit-overflow-scrolling: touch;
 		display: flex;
 		align-items: center;
-		gap: var(--px8);
-		padding-top: var(--px16);
+		mask-image: var(--lineMask);
 		&::-webkit-scrollbar {
 			display: none;
 		}

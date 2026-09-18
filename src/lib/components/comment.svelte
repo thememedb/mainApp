@@ -1,7 +1,7 @@
 <script>
 	import { Icon, Username, Score, Time } from '$lib';
 	let { comment } = $props();
-	let { user, comment: commentText, time, rank, vote } = $derived(comment);
+	let { user, comment: commentText, time, score, vote } = $derived(comment);
 </script>
 
 <div class="comment">
@@ -13,7 +13,8 @@
 			<Username name={user.name} icon={user.icon} />
 			<div class="bottom">
 				<div class="score-time">
-					<Score score={rank} />
+					<Score {score} />
+					<span class="dot"> • </span>
 					<Time {time} />
 				</div>
 				<div class="reactionButtons">
@@ -59,6 +60,10 @@
 						font-weight: 400;
 						line-height: 1;
 						font-size: var(--px15);
+						.dot {
+							font-size: var(--px18);
+							color: var(--gray70);
+						}
 					}
 					:global(&:has(.time)) {
 						transform: translateY(var(---px2));
@@ -68,7 +73,7 @@
 					}
 					:global(&:has(.date)) {
 						transform: translateY(var(---px2));
-						/* gap: var(--px12); */
+						color: var(--px60);
 						.reactionButtons {
 							transform: translateY(calc(var(--px1) * 6.75));
 						}

@@ -18,41 +18,43 @@
 	</div>
 	<div class="stats">
 		<div>Aura: {aura}</div>
-		<div>Rank: </div>
+		<div>Rank:</div>
 		<div>Credits: {credits}</div>
-		<div>Uploads: </div>
-		<div>Favorites: </div>
-
+		<div>Uploads:</div>
+		<div>Favorites:</div>
 	</div>
 </section>
 
 <style>
-	.user {
-		padding-top: var(--px64);
-		padding-bottom: var(--px36);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
-		gap: var(--px16);
-		.avatar {
-			width: var(--px128);
-			height: var(--px128);
-			border-radius: 100%;
+	section {
+		min-height: calc(100vh - var(--headerHeight));
+		.user {
+			padding-top: var(--px64);
+			padding-bottom: var(--px36);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			gap: var(--px16);
+			.avatar {
+				width: var(--px128);
+				height: var(--px128);
+				border-radius: 100%;
+			}
+			.user-info {
+				color: var(--white);
+				padding-left: calc(var(--px24) + var(--px5));
+			}
 		}
-		.user-info {
-			color: var(--white);
-			padding-left: calc(var(--px24) + var(--px5));
+		.stats {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--px8);
+			padding-left: var(--px8);
+			font-size: var(--px16);
+			font-weight: 400;
+			color: var(--gray90);
 		}
-	}
-	.stats {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: var(--px8);
-		padding-left: var(--px8);
-		font-size: var(--px16);
-		font-weight: 400;
-		color: var(--gray90);
 	}
 </style>

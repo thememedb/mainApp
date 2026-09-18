@@ -2,7 +2,7 @@
 	let { icon, ...props } = $props();
 </script>
 
-<img src={`/icons/${icon}.svg`} alt={icon} {...props} />
+<img src={`/userStatusIcons/${icon}.svg`} alt={icon} {...props} />
 
 <style>
 	img {
