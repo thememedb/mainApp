@@ -12,6 +12,7 @@
 <style>
 	.end {
 		padding-top: var(--px8);
+		padding-bottom: var(--px4);
 		display: flex;
 		align-items: center;
 		justify-content: center;
