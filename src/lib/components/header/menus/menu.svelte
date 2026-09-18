@@ -33,6 +33,7 @@
 		sineOut
 	} from 'svelte/easing';
 	import { fade, fly } from 'svelte/transition';
+	import { ui, uiMenuEnum } from '$lib';
 
 	let { isMenuOpen = $bindable(false), children, x = 0, y = 0 } = $props();
 

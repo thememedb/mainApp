@@ -7,20 +7,19 @@
 	<Icon name="top" />
 	<Icon name="reply" />
 	<Icon name="share" />
-	<!-- &lt;-go back ^go to top^ <Icon name="reply" />reply -->
 </div>
 
 <style>
 	.end {
+		padding-top: var(--px8);
 		display: flex;
-		gap: var(--px24);
 		align-items: center;
 		justify-content: center;
-		height: var(--px64);
 		:global(.icon) {
+			padding: var(--px16);
 			color: var(--gray80);
-			width: var(--px32);
-			height: var(--px32);
+			width: var(--px64);
+			height: var(--px64);
 		}
 	}
 </style>
