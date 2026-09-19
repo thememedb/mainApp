@@ -11,8 +11,7 @@
 
 <style>
 	.end {
-		padding-top: var(--px8);
-		padding-bottom: var(--px4);
+		padding: var(--px8) 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
