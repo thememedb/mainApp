@@ -1,45 +1,28 @@
 <script lang="ts">
-	import Icon from '$lib/components/icon.svelte';
-	import { page } from '$app/state';
-	import { fade } from 'svelte/transition';
-	import LogoMenuItems from './menus/logoMenuItems.svelte';
-	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
-	let isProfile = $derived(page.route.id === '/users/[user]');
-	let isHome = $derived(page.route.id === '/[country]/[category]');
+	import { Icon, FilterMenuItems, Menu } from '$lib';
 	let isMenuOpen = $state(false);
 </script>
 
 <button onclick={() => (isMenuOpen = !isMenuOpen)} class="menu-logo">
-	<div class="iconWrapper">
-		<Icon name="funnel" class="funnel-icon" />
-		{#if !isMenuOpen}
-			<div class="indicator" transition:fade={{ duration: 250 }}></div>
-		{/if}
-	</div>
+	<Icon name="funnel" class={isMenuOpen ? 'funnel-icon active' : 'funnel-icon'} />
 </button>
+<Menu y={-50} bind:isMenuOpen>
+	<FilterMenuItems />
+</Menu>
 
 <style>
 	button {
 		width: var(--px48);
 		height: var(--px64);
 		padding: var(--px20) var(--px12);
-		.iconWrapper {
-			position: relative;
-			:global(.funnel-icon) {
-				padding: 0;
-				color: var(--gray80);
-				width: var(--px24);
-				height: var(--px24);
-			}
-			.indicator {
-				--size: var(--px6);
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: var(--size);
-				height: var(--size);
-				background: var(--gray80);
-				clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+		:global(.funnel-icon) {
+			padding: 0;
+			color: var(--gray80);
+			width: var(--px24);
+			height: var(--px24);
+			transition: all 300ms ease-out;
+			&.active {
+				color: var(--yellow);
 			}
 		}
 	}

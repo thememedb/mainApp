@@ -1,28 +1,20 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import { fade } from 'svelte/transition';
-	import { goto } from '$app/navigation';
-	import { ui, uiMenuEnum } from '$lib';
-	let isHome = $derived(page.route.id === '/[country]/[category]');
-
-	const onclick = () => {
-		if (isHome && ui.menu !== uiMenuEnum.main) return ui.menu = uiMenuEnum.main;
-		if (isHome && ui.menu === uiMenuEnum.main) return ui.menu = uiMenuEnum.closed;
-		if (!isHome) goto('/lithuania/top');
-	};
+	import { Menu, LogoMenuItems } from '$lib';
+	let isMenuOpen = $state(false);
 </script>
 
-<button {onclick} class="menu-logo">
+<button onclick={() => (isMenuOpen = !isMenuOpen)} class="logo-menu">
+	<!-- delete this logoNmark left unnecessary after indicator removal -->
 	<div class="logoNmark">
 		<img class="logo-image" src="/favicon.png" alt="Logo" />
-		{#if isHome && ui.menu !== uiMenuEnum.main}
-			<div class="indicator" transition:fade={{ duration: 250 }}></div>
-		{/if}
 	</div>
 </button>
+<Menu x={50} bind:isMenuOpen>
+	<LogoMenuItems />
+</Menu>
 
 <style>
-	.menu-logo {
+	.logo-menu {
 		width: var(--px64);
 		height: var(--px64);
 		padding: var(--px9) var(--mobilePadding) var(--px9) var(--px2);
@@ -38,16 +30,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			.indicator {
-				--size: var(--px6);
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: var(--size);
-				height: var(--size);
-				background: var(--gray80);
-				clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
-			}
 			.logo-image {
 				--size: calc(var(--px1) * 54);
 				object-fit: cover;

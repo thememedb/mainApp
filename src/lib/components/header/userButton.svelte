@@ -1,27 +1,20 @@
 <script lang="ts">
-	import { page } from '$app/state';
-	import { fade } from 'svelte/transition';
-	import { goto } from '$app/navigation';
-	let isProfile = $derived(page.route.id === '/users/[user]');
+	import { Menu, UserMenuItems } from '$lib';
 	let isMenuOpen = $state(false);
-
-	const onclick = () => {
-		if (isProfile) isMenuOpen = !isMenuOpen;
-		if (!isProfile) goto('/users/3');
-	};
 </script>
 
-<button {onclick} class="user-avatar-container">
+<button onclick={() => (isMenuOpen = !isMenuOpen)} class="user-menu">
+	<!-- remove this picNmark div. left unnecessery after indicator was removed. -->
 	<div class="picNmark">
 		<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
-		{#if !isMenuOpen && isProfile}
-			<div class="indicator" transition:fade={{ duration: 250 }}></div>
-		{/if}
 	</div>
 </button>
+<Menu x={-50} bind:isMenuOpen>
+	<UserMenuItems />
+</Menu>
 
 <style>
-	.user-avatar-container {
+	.user-menu {
 		width: var(--px64);
 		height: var(--px64);
 		padding: var(--px12) var(--px18) var(--px12) var(--px6);
@@ -29,16 +22,6 @@
 			position: relative;
 			width: var(--px40);
 			height: var(--px40);
-			.indicator {
-				--size: var(--px6);
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				width: var(--size);
-				height: var(--size);
-				background: var(--gray80);
-				clip-path: polygon(100% 0, 100% 100%, 0 100%);
-			}
 		}
 		@media (pointer: fine) {
 			padding: var(--px12) var(--px16) var(--px12) var(--mobilePadding);

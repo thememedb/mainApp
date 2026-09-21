@@ -13,6 +13,10 @@ export { default as Time } from './components/time.svelte';
 export { default as Username } from './components/username.svelte';
 export { default as UserSection } from './post/2_userSection.svelte';
 export { default as Views } from './components/views.svelte';
+export { default as Menu } from './components/header/menu.svelte';
+export { default as LogoMenuItems } from './components/header/logoMenuItems.svelte';
+export { default as UserMenuItems } from './components/header/userMenuItems.svelte';
+export { default as FilterMenuItems } from './components/header/filterMenuItems.svelte';
 
 export { default as thumbs } from './thumbs.json';
 export { ui, uiMenuEnum } from './state.svelte.js';

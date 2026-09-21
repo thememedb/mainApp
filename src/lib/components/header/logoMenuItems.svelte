@@ -2,6 +2,7 @@
 </script>
 
 <div class="menu">
+	<a class="item" href="/"> Home </a>
 	<div class="item">News</div>
 	<div class="item">Blog</div>
 	<div class="item">Shop</div>
@@ -15,8 +16,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		background: var(--black);
-		border-bottom-left-radius: var(--px16);
 		.item {
 			display: flex;
 			width: 100%;

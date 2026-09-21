@@ -27,6 +27,7 @@ html {
 	--px22: calc(22 * var(--px1));
 	--px23: calc(23 * var(--px1));
 	--px24: calc(24 * var(--px1));
+	--px25: calc(25 * var(--px1));
 	--px28: calc(28 * var(--px1));
 	--px32: calc(32 * var(--px1));
 	--px36: calc(36 * var(--px1));

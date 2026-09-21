@@ -5,8 +5,6 @@
 	import Icon from '$lib/components/icon.svelte';
 	import { page } from '$app/state';
 	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
-	let isProfile = $derived(page.route.id === '/users/[user]');
-	let isHome = $derived(page.route.id === '/[country]/[category]');
 </script>
 
 {#snippet nav()}
@@ -21,7 +19,7 @@
 </div>
 {/snippet}
 
-<div class="header-background"></div>
+<div class="header-spacer-for-layout"></div> 
 
 {#if isDetails}
 	<header>
@@ -42,7 +40,7 @@
 {/if}
 
 <style>
-	.header-background {
+	.header-spacer-for-layout {
 		width: 100%;
 		height: var(--px64);
 	}
