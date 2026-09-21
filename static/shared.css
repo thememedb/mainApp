@@ -123,6 +123,7 @@ html::-webkit-scrollbar {
 }
 *:not(dialog) {
 	margin: 0;
+	-webkit-tap-highlight-color: transparent;
 }
 body {
 	color: var(--white);
