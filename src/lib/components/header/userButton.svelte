@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { Menu, UserMenuItems } from '$lib';
-	let isMenuOpen = $state(false);
+	import { ui, uiMenuEnum } from '$lib';
+	const onclick = () => {
+		ui.x = -ui.spring;
+		ui.y = 0;
+		ui.menu = uiMenuEnum.user;
+	};
 </script>
 
-<button onclick={() => (isMenuOpen = !isMenuOpen)} class="user-menu">
+<button {onclick} class="user-menu">
 	<!-- remove this picNmark div. left unnecessery after indicator was removed. -->
 	<div class="picNmark">
 		<img class="user-avatar" src="/userAvatars/2.jpg" alt="Users Avatar" />
 	</div>
 </button>
-<Menu x={-50} bind:isMenuOpen>
-	<UserMenuItems />
-</Menu>
 
 <style>
 	.user-menu {

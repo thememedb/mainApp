@@ -4,6 +4,7 @@
 <div class="menu" id="menu">
 	<div class="item">News</div>
 	<div class="item">Blog</div>
+	<a href="/user/15" class="item">User 15</a>
 	<div class="item">Shop</div>
 	<div class="item">Contacts</div>
 	<div class="item">Settings</div>

@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { Menu, LogoMenuItems } from '$lib';
-	let isMenuOpen = $state(false);
+	import { ui, uiMenuEnum } from '$lib';
+	const onclick = () => {
+		ui.x = ui.spring;
+		ui.y = 0;
+		ui.menu = uiMenuEnum.main;
+	};
 </script>
 
-<button onclick={() => (isMenuOpen = !isMenuOpen)} class="logo-menu">
+<button {onclick} class="logo-menu">
 	<!-- delete this logoNmark left unnecessary after indicator removal -->
 	<div class="logoNmark">
 		<img class="logo-image" src="/favicon.png" alt="Logo" />
 	</div>
 </button>
-<Menu x={50} bind:isMenuOpen>
-	<LogoMenuItems />
-</Menu>
 
 <style>
 	.logo-menu {

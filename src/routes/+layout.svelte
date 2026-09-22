@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Header } from '$lib';
+	import { Header, Menu } from '$lib';
 	let { children } = $props();
 </script>
 
@@ -8,6 +8,7 @@
 	<div class="children">
 		{@render children()}
 	</div>
+	<Menu />
 </main>
 
 <style>

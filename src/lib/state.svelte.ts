@@ -1,15 +1,21 @@
 export enum uiMenuEnum {
-	closed = 'closed',
+	none = 'none',
 	main = 'main',
 	user = 'user',
 	filter = 'filter'
 }
 type UiState = {
 	menu: uiMenuEnum;
+	x: number;
+	y: number;
+	spring: number;
+	duration: number;
 };
 
-
 export let ui = $state<UiState>({
-	menu: uiMenuEnum.closed
+	menu: uiMenuEnum.none,
+	x: 0,
+	y: 0,
+	spring: 50,
+	duration: 300
 });
-

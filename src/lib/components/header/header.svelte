@@ -1,43 +1,35 @@
 <script lang="ts">
-	import FilterButton from './filterButton.svelte';
 	import UserButton from './userButton.svelte';
 	import LogoButton from './logoButton.svelte';
-	import Icon from '$lib/components/icon.svelte';
+	import { Icon, FilterButton } from '$lib';
 	import { page } from '$app/state';
 	let isDetails = $derived(page.route.id === '/[country]/[category]/[item]');
 </script>
 
-{#snippet nav()}
-<div class="nav">
-	<a href="/donate">
-		<Icon name="handCoinsBold3" class="icon" />
-	</a>
-	<a href="/uppload">
-		<Icon name="cloudArrowUp" class="icon" />
-	</a>
-	<FilterButton />
-</div>
-{/snippet}
-
-<div class="header-spacer-for-layout"></div> 
-
-{#if isDetails}
-	<header>
+<div class="header-spacer-for-layout"></div>
+<header>
+	{#if isDetails}
 		<a href={`/lithuania/top#${page.data.media.id}`}>
 			<Icon name="arrowLeftFat" class="icon back" />
 		</a>
-		{@render nav()}
+	{:else}<UserButton />{/if}
+
+	<div class="nav">
+		<a href="/donate">
+			<Icon name="handCoinsBold3" class="icon" />
+		</a>
+		<a href="/uppload">
+			<Icon name="cloudArrowUp" class="icon" />
+		</a>
+		<FilterButton />
+	</div>
+
+	{#if isDetails}
 		<a href="/share">
 			<Icon name="share" class="icon share" />
 		</a>
-	</header>
-	{:else}
-	<header>
-		<UserButton />
-		{@render nav()}
-		<LogoButton />
-	</header>
-{/if}
+	{:else}<LogoButton />{/if}
+</header>
 
 <style>
 	.header-spacer-for-layout {
@@ -57,6 +49,7 @@
 			linear-gradient(to right, rgba(0, 0, 0, 1) 0px, rgba(0, 0, 0, 0) var(--px64)),
 			linear-gradient(to left, rgba(0, 0, 0, 1) 0px, rgba(0, 0, 0, 0) var(--px64));
 		background: var(--gradient);
+		/* background: rgba(50, 0, 0, 0.8); */
 		position: fixed;
 		top: 0;
 		width: 100%;

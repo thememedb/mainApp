@@ -1,14 +1,19 @@
 <script lang="ts">
-	import { Icon, FilterMenuItems, Menu } from '$lib';
-	let isMenuOpen = $state(false);
+	import { Icon, ui, uiMenuEnum } from '$lib';
+	const onclick = () => {
+		ui.x = 0;
+		ui.y = -ui.spring;
+		ui.menu = uiMenuEnum.filter;
+	};
 </script>
 
-<button onclick={() => (isMenuOpen = !isMenuOpen)} class="menu-logo">
-	<Icon name="funnel" class={isMenuOpen ? 'funnel-icon active' : 'funnel-icon'} />
+<button {onclick} class="menu-logo">
+	<Icon
+		name="funnel"
+		class={ui.menu === uiMenuEnum.filter ? 'funnel-icon active' : 'funnel-icon'}
+		style={`transition: all ${ui.duration}ms ease-out`}
+	/>
 </button>
-<Menu y={-50} bind:isMenuOpen>
-	<FilterMenuItems />
-</Menu>
 
 <style>
 	button {
@@ -20,7 +25,6 @@
 			color: var(--gray80);
 			width: var(--px24);
 			height: var(--px24);
-			transition: all 300ms ease-out;
 			&.active {
 				color: var(--yellow);
 			}

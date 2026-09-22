@@ -17,6 +17,9 @@ export { default as Menu } from './components/header/menu.svelte';
 export { default as LogoMenuItems } from './components/header/logoMenuItems.svelte';
 export { default as UserMenuItems } from './components/header/userMenuItems.svelte';
 export { default as FilterMenuItems } from './components/header/filterMenuItems.svelte';
+export { default as FilterButton} from './components/header/filterButton.svelte';
+export { default as LogoButton} from './components/header/logoButton.svelte';
+export { default as UserButton} from './components/header/userButton.svelte';
 
 export { default as thumbs } from './thumbs.json';
 export { ui, uiMenuEnum } from './state.svelte.js';
