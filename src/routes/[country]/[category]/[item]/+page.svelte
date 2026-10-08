@@ -1,20 +1,22 @@
 <script lang="ts">
 	import {
-		TagSection,
-		ReactionSection,
-		UserSection,
-		MediaSection,
+		ActionSection,
 		CommentSection,
-		FooterSection
+		EmojiSection,
+		FooterSection,
+		MediaSection,
+		TagSection,
+		UserSection
 	} from '$lib';
 	let { data } = $props();
-	
-	let { media, user, reactions, tags, comments } = $derived(data);
+
+	let { media, user, emojis, tags, comments } = $derived(data);
 </script>
 
 <MediaSection {media} />
 <UserSection {user} />
-<ReactionSection {reactions} />
+<ActionSection />
+<EmojiSection {emojis} />
 <TagSection {tags} />
 <CommentSection {comments} />
 <FooterSection />

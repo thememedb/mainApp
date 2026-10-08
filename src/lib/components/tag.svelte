@@ -35,6 +35,9 @@
 		&:first-child .plus {
 			padding-left: var(--px8);
 		}
+		&:last-child .minus {
+			padding-right: var(--px8);
+		}
 		.plus {
 			padding: var(--px8) var(--px0) var(--px8) var(--px4);
 			.plusBG {

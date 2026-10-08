@@ -13,7 +13,7 @@ type ResultType = {
 	score: string;
 	emoji: string;
 }[];
-const reactions: ResultType = [
+const emojis: ResultType = [
 	{ id: 2, score: '19', emoji: '😁' },
 	{ id: 1, score: '20', emoji: '😂' },
 	{ id: 3, score: '18', emoji: '🐢' },
@@ -355,7 +355,7 @@ export async function load({ params }) {
 			score: rndScore(-200, 1000),
 			views: rndScore(1, 10000)
 		},
-		reactions: rndArray(reactions),
+		emojis: rndArray(emojis),
 		tags: rndArray(tags),
 		comments: randomComments()
 	};
