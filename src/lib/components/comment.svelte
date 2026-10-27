@@ -56,6 +56,7 @@
 					align-items: baseline;
 					gap: var(--px6);
 					.score-time {
+						flex-shrink: 0;
 						color: var(--gray80);
 						font-weight: 400;
 						line-height: 1;
@@ -80,6 +81,7 @@
 					}
 					.reactionButtons {
 						display: flex;
+						flex-shrink: 0;
 						:global(.icon) {
 							--padding: var(--px5);
 							color: var(--gray50);
@@ -100,10 +102,14 @@
 			white-space: pre-line;
 			margin-left: calc(var(--px1) * -1);
 			font-size: calc(var(--px1) * 16);
-			font-weight: 325;
-			word-spacing: calc(var(--px1) * 2);
+			/* font-weight: 325;
 			color: var(--gray90);
+			word-spacing: calc(var(--px1) * 2); */
+			font-weight: 380;
+			color: var(--gray80);
+			/* word-spacing: calc(var(--px1) * 2); */
 			line-height: var(--px22);
+			overflow: hidden;
 		}
 	}
 </style>

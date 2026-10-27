@@ -16,7 +16,7 @@
 
 	<div class="nav">
 		<a href="/donate">
-			<Icon name="handCoinsBold3" class="icon" />
+			<Icon name="donate" class="icon" />
 		</a>
 		<a href="/uppload">
 			<Icon name="cloudArrowUp" class="icon" />
@@ -60,32 +60,39 @@
 		justify-content: space-between;
 		align-items: center;
 		z-index: 1000;
+		--iconSize: var(--px36);
+		--areaSize: var(--px64);
+		--padding: calc((var(--areaSize) - var(--iconSize)) / 2);
 		:global(.icon.back) {
 			color: var(--gray80);
-			width: var(--px64);
-			height: var(--px64);
-			padding: var(--px14) calc(var(--px28) - var(--mobilePadding)) var(--px14)
-				calc(var(--mobilePadding));
+			--shift: var(---px8);
+			width: var(--areaSize);
+			height: var(--areaSize);
+			padding-left: calc(var(--padding) + var(--shift));
+			padding-right: calc(var(--padding) - var(--shift));
+			padding-top: var(--padding);
+			padding-bottom: var(--padding);
 		}
 		.nav {
 			display: flex;
 			align-items: center;
 			:global(.icon) {
-				position: relative;
-				padding: var(--px20) var(--px12);
+				/* position: relative; */
+				padding: var(--px16) var(--px8);
 				color: var(--gray80);
 				width: var(--px48);
-				height: var(--px64);
+				height: var(--areaSize);
 			}
 		}
 		:global(.icon.share) {
 			color: var(--gray80);
-			width: var(--px64);
-			height: var(--px64);
-			padding-top: var(--px13);
-			padding-right: var(--mobilePadding);
-			padding-bottom: var(--px15);
-			padding-left: calc(var(--px28) - var(--mobilePadding));
+			--shift: var(--px8);
+			width: var(--areaSize);
+			height: var(--areaSize);
+			padding-left: calc(var(--padding) + var(--shift));
+			padding-right: calc(var(--padding) - var(--shift));
+			padding-top: var(--padding);
+			padding-bottom: var(--padding);
 		}
 	}
 </style>

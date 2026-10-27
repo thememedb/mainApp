@@ -19,7 +19,7 @@
 		scrollbar-width: none;
 		-ms-overflow-style: none;
 		-webkit-overflow-scrolling: touch;
-		mask-image: var(--lineMask);
+		mask-image: var(--lineMask2);
 		&::-webkit-scrollbar {
 			display: none;
 		}

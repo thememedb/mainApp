@@ -58,7 +58,7 @@
 		}
 		.tag {
 			height: var(--px48);
-			min-width: var(--px32);
+			min-width: var(--px24);
 			display: flex;
 			align-items: center;
 			padding: var(--px8) var(--px0);

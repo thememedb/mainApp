@@ -19,12 +19,10 @@
 	button {
 		width: var(--px48);
 		height: var(--px64);
-		padding: var(--px20) var(--px12);
+		padding: var(--px16) var(--px8);
 		:global(.funnel-icon) {
 			padding: 0;
 			color: var(--gray80);
-			width: var(--px24);
-			height: var(--px24);
 			&.active {
 				color: var(--yellow);
 			}

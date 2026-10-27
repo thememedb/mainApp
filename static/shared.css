@@ -96,6 +96,21 @@ html {
 		rgba(0, 0, 0, 0) 100%,
 		transparent
 	);
+	--lineMask2: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 0.04) var(--px2),
+		rgba(0, 0, 0, 0.16) var(--px4),
+		rgba(0, 0, 0, 0.25) var(--px5),
+		rgba(0, 0, 0, 0.36) var(--px6),
+		rgba(0, 0, 0, 0.49) var(--px7),
+		rgba(0, 0, 0, 0.64) var(--px8),
+		rgba(0, 0, 0, 0.81) var(--px9),
+		rgba(0, 0, 0, 1) var(--px11),
+		rgba(0, 0, 0, 1) 85%,
+		rgba(0, 0, 0, 0) 100%,
+		transparent
+	);
 
 	--bg-0: var(--black);
 	--bg-1: var(--gray05);

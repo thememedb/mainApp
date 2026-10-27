@@ -75,7 +75,7 @@ const tags: TagsType = [
 	{
 		id: 31365464,
 		score: 6,
-		text: '☪️Hncer'
+		text: '☪️ancer'
 	}
 ];
 
@@ -213,7 +213,7 @@ const randomLithuanianText = (maxWords = 30) => {
 	return sentences.join(' ');
 };
 
-const comments = () => {
+const staticComments = () => {
 	let comment1 = {
 		user: {
 			id: 321321,
@@ -223,7 +223,8 @@ const comments = () => {
 		},
 		// comment: randomLithuanianText(30),
 		comment: 'M̴̢͕͓̣̏̐̉̌̽͒̌͘ͅi̷͎̠͍͔̬̦̿̀̓̎̍́́̍s̴̼̈́̾͋t̸͕͎̻̳̮̰̦́ę̴̹͔̌̓͛͑r̷̨̤̱̰̖͛̃͘ ̴̨̨̰̹̠̩̳̳͌͊A̴̲̗͖̚ͅn̶̢̬̩͓͎̑d̷̠̈́̈̋̇̓̚̚͠e̷̤̪͋̑̈̿̚r̸̛̞̱̮͓͈̣̀̀͜͠s̵̨̡͎̩̣̘͕̤̏o̶̻͖̥͔̘̝̔͗̋̊́̚͜͝͝ń̸͙̭̀̈́̚ 😈',
-		time: rndDate().toString(),
+		time: new Date(Date.now() - 21 * 24 * 60 * 60 * 1000).toISOString(),
+		// time: rndDate().toString(),
 		score: rndScore(-200, 1000),
 		vote: null
 	};
@@ -332,14 +333,13 @@ const generateComment = () => ({
 	vote: null
 });
 
-function randomComments(maxGroups = 5, maxPerGroup = 8) {
+function comments(maxGroups = 5, maxPerGroup = 8) {
 	const groups = Math.floor(Math.random() * maxGroups) + 1;
-
-	return [...Array.from({ length: groups }, () => {
+	function randomCommentGroup() {
 		const count = Math.floor(Math.random() * maxPerGroup) + 1;
-
 		return Array.from({ length: count }, () => generateComment());
-	}), ...comments()];
+	};
+	return [...Array.from({ length: groups }, randomCommentGroup), ...staticComments()];
 }
 
 export async function load({ params }) {
@@ -357,7 +357,7 @@ export async function load({ params }) {
 		},
 		emojis: rndArray(emojis),
 		tags: rndArray(tags),
-		comments: randomComments()
+		comments: comments()
 	};
 	return post;
 }
