@@ -7,6 +7,7 @@
 	{#each items as item}
 		<a href="/lithuania/top/{item.id}" aria-label="View details for {item.id}">
 			<div
+				id={String(item.id)}
 				class="square"
 				style="background-image: url({'https://thumb.pr0gramm.com/' +
 					item.thumb}); background-size: cover; background-position: center;"
@@ -30,6 +31,7 @@
 	}
 	.square {
 		aspect-ratio: 1;
+		scroll-margin-top: var(--px64);
 		background-color: var(--gray40);
 	}
 </style>

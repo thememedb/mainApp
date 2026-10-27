@@ -2,7 +2,8 @@
 	let { score } = $props();
 </script>
 
-<span class="score">{score > 0 ? '+' : ''}{score} • </span>
+<!-- minus not necessary, because it's displayed by default -->
+<span class="score">{score > 0 ? '+' : ''}{score}</span>
 
 <style>
 	.score {

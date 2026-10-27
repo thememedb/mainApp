@@ -23,7 +23,7 @@
 		if (hours < 24) return { text: dateFormatRelative.format(-hours, 'hours'), isDate: false };
 		if (days < 7) return { text: dateFormatRelative.format(-days, 'days'), isDate: false };
 
-		return { text: dateFormatShort.format(postDate), isDate: true };
+		return { text: dateFormatShort.format(postDate), isDate: false };
 	}
 
 	let res = $derived(showTimeAgo(time));

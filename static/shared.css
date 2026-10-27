@@ -1,6 +1,8 @@
 /* variables*/
 html {
 	color-scheme: light dark;
+	--width: 100cqw;
+	--px0: 0px;
 	--px1: calc(100cqw / 376);
 	--px2: calc(2 * var(--px1));
 	--px3: calc(3 * var(--px1));
@@ -25,14 +27,19 @@ html {
 	--px22: calc(22 * var(--px1));
 	--px23: calc(23 * var(--px1));
 	--px24: calc(24 * var(--px1));
+	--px25: calc(25 * var(--px1));
 	--px28: calc(28 * var(--px1));
 	--px32: calc(32 * var(--px1));
 	--px36: calc(36 * var(--px1));
+	--px40: calc(40 * var(--px1));
 	--px42: calc(42 * var(--px1));
+	--px46: calc(46 * var(--px1));
 	--px48: calc(48 * var(--px1));
 	--px52: calc(52 * var(--px1));
 	--px56: calc(56 * var(--px1));
 	--px64: calc(64 * var(--px1));
+	--px96: calc(96 * var(--px1));
+	--px128: calc(128 * var(--px1));
 	---px1: calc(-1 * var(--px1));
 	---px2: calc(-2 * var(--px1));
 	---px3: calc(-3 * var(--px1));
@@ -43,7 +50,13 @@ html {
 	---px8: calc(-8 * var(--px1));
 	---px9: calc(-9 * var(--px1));
 	---px10: calc(-10 * var(--px1));
-	--leftpad: var(--px8);
+	---px12: calc(-12 * var(--px1));
+
+	--mobilePadding: var(--px8);
+	--maxWidth: 644px;
+	--minWidth: 244px;
+	--headerHeight: var(--px64);
+
 	--red: #e0251f;
 	--orange: #fc6605;
 	--yellow: #ffdc00;
@@ -68,6 +81,37 @@ html {
 	--white: #ffffff;
 	/* --white: light-dark(black, white); */
 
+	--lineMask: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 0.04) var(--px2),
+		rgba(0, 0, 0, 0.16) var(--px4),
+		rgba(0, 0, 0, 0.25) var(--px5),
+		rgba(0, 0, 0, 0.36) var(--px6),
+		rgba(0, 0, 0, 0.49) var(--px7),
+		rgba(0, 0, 0, 0.64) var(--px8),
+		rgba(0, 0, 0, 0.81) var(--px9),
+		rgba(0, 0, 0, 1) var(--px11),
+		rgba(0, 0, 0, 1) 90%,
+		rgba(0, 0, 0, 0) 100%,
+		transparent
+	);
+	--lineMask2: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 0.04) var(--px2),
+		rgba(0, 0, 0, 0.16) var(--px4),
+		rgba(0, 0, 0, 0.25) var(--px5),
+		rgba(0, 0, 0, 0.36) var(--px6),
+		rgba(0, 0, 0, 0.49) var(--px7),
+		rgba(0, 0, 0, 0.64) var(--px8),
+		rgba(0, 0, 0, 0.81) var(--px9),
+		rgba(0, 0, 0, 1) var(--px11),
+		rgba(0, 0, 0, 1) 85%,
+		rgba(0, 0, 0, 0) 100%,
+		transparent
+	);
+
 	--bg-0: var(--black);
 	--bg-1: var(--gray05);
 	--bg-2: var(--gray10);
@@ -86,17 +130,6 @@ html {
 html::-webkit-scrollbar {
 	display: none; /* Chrome, Safari */
 }
-/* html.dark {
-	--bg-1: #2e2e2e;
-	--bg-2: #4d4d4d;
-	--bg-3: #666;
-	--fg-1: #e6e6e6;
-	--fg-2: #b3b3b3;
-	--fg-3: #999;
-	--link: #73c1fc;
-	--link-hover: #91cefd;
-	--link-active: #4baffb;
-} */
 
 *,
 *::before,
@@ -105,10 +138,17 @@ html::-webkit-scrollbar {
 }
 *:not(dialog) {
 	margin: 0;
+	-webkit-tap-highlight-color: transparent;
 }
 body {
 	color: var(--white);
-	background: var(--black);
+	background: linear-gradient(
+		to right,
+		var(--gray05) calc(50% - 960px),
+		var(--black) calc(50% - 322px),
+		var(--black) calc(50% + 322px),
+		var(--gray05) calc(50% + 960px)
+	);
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 700;
@@ -177,7 +217,7 @@ h6 {
 	position: relative;
 	width: 100%;
 	height: max-content;
-	padding-left: var(--leftpad);
+	padding-left: var(--mobilePadding);
 }
 a {
 	text-decoration: none;

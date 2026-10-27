@@ -1,7 +1,7 @@
 <script>
 	import { Icon, Username, Score, Time } from '$lib';
 	let { comment } = $props();
-	let { user, comment: commentText, time, rank, vote } = $derived(comment);
+	let { user, comment: commentText, time, score, vote } = $derived(comment);
 </script>
 
 <div class="comment">
@@ -13,7 +13,8 @@
 			<Username name={user.name} icon={user.icon} />
 			<div class="bottom">
 				<div class="score-time">
-					<Score score={rank} />
+					<Score {score} />
+					<span class="dot"> • </span>
 					<Time {time} />
 				</div>
 				<div class="reactionButtons">
@@ -55,34 +56,42 @@
 					align-items: baseline;
 					gap: var(--px6);
 					.score-time {
+						flex-shrink: 0;
 						color: var(--gray80);
 						font-weight: 400;
 						line-height: 1;
 						font-size: var(--px15);
+						.dot {
+							font-size: var(--px18);
+							color: var(--gray70);
+						}
 					}
 					:global(&:has(.time)) {
 						transform: translateY(var(---px2));
 						.reactionButtons {
-							transform: translateY(var(--px8));
+							transform: translateY(var(--px7));
 						}
 					}
 					:global(&:has(.date)) {
-						transform: translateY(var(---px1));
-						gap: var(--px12);
+						transform: translateY(var(---px2));
+						color: var(--px60);
 						.reactionButtons {
 							transform: translateY(calc(var(--px1) * 6.75));
 						}
 					}
 					.reactionButtons {
 						display: flex;
-						/* gap: var(--px10); */
+						flex-shrink: 0;
 						:global(.icon) {
+							--padding: var(--px5);
 							color: var(--gray50);
-							width: calc(var(--px24) + 2 * var(--px5));
+							width: calc(var(--px24) + 2 * var(--padding));
 							height: var(--px24);
-							padding: 0 var(--px5);
+							padding: 0 var(--padding);
 							&.first {
-								
+								--padding: var(--px2);
+								width: calc(var(--px24) + 2 * var(--padding));
+								padding: 0 var(--padding);
 							}
 						}
 					}
@@ -90,11 +99,17 @@
 			}
 		}
 		.commentText {
+			white-space: pre-line;
 			margin-left: calc(var(--px1) * -1);
-			font-size: var(--px16);
-			font-weight: 400;
+			font-size: calc(var(--px1) * 16);
+			/* font-weight: 325;
 			color: var(--gray90);
+			word-spacing: calc(var(--px1) * 2); */
+			font-weight: 380;
+			color: var(--gray80);
+			/* word-spacing: calc(var(--px1) * 2); */
 			line-height: var(--px22);
+			overflow: hidden;
 		}
 	}
 </style>

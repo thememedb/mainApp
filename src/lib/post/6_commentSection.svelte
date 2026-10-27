@@ -18,7 +18,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--px36);
-		padding-top: var(--px24);
+		padding-top: var(--px16);
 	}
 	.threadContainer {
 		--padding: var(--px16);
@@ -28,7 +28,7 @@
 		padding: var(--padding) var(--px4) var(--px12) var(--padding);
 		border-top-left-radius: calc(var(--px1) * 42) calc(var(--px1) * 40);
 		border-bottom-left-radius: var(--px18);
-		border-left: calc(var(--px1) * 2) solid transparent;
+		border-left: var(--px2) solid transparent;
 		border-bottom: calc(var(--px1) * 1.5) solid transparent;
 		background:
 			linear-gradient(var(--black), var(--black)) padding-box,
